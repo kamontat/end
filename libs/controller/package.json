@@ -6,12 +6,10 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "build": "node_modules/.bin/my-build",
-    "my-bulk-command": "node_modules/.bin/my-bulk-command"
+    "build": "node_modules/.bin/compiler"
   },
   "dependencies": {},
   "devDependencies": {
-    "@nd/dev-cli": "1.0.0",
-    "typescript": "3.8.3"
+    "@nd/dev-cli": "1.0.0"
   }
 }

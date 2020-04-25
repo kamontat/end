@@ -4,11 +4,12 @@
   "description": "An example toolchain used to build projects in this repo",
   "license": "MIT",
   "bin": {
-    "my-build": "bin/my-build.js",
+    "compiler": "bin/compiler.js",
     "my-bulk-command": "bin/my-bulk-command.js"
   },
   "scripts": {
-    "build": "rimraf ./lib/ && tsc"
+    "build": "rimraf ./lib/ && tsc",
+    "gulp": "gulp"
   },
   "dependencies": {
     "colors": "1.4.0"
@@ -16,6 +17,10 @@
   "devDependencies": {
     "@types/node": "12.12.6",
     "rimraf": "3.0.2",
-    "typescript": "3.8.3"
+    "typescript": "3.8.3",
+    "@microsoft/node-library-build": "6.4.10",
+    "gulp": "4.0.2",
+    "@microsoft/rush-stack-compiler-3.7": "0.2.9",
+    "@types/mocha": "7.0.2"
   }
 }
