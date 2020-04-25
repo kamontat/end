@@ -42,7 +42,7 @@
      *
      * Valid values are: "prerelease", "release", "minor", "patch", "major"
      */
-    "nextBump": "prerelease",
+    "nextBump": "prerelease"
 
     /**
      * (Optional) If specified, all packages in the set share a common CHANGELOG.md file.
@@ -51,7 +51,7 @@
      * If this field is omitted, then a separate CHANGELOG.md file will be maintained for each
      * package in the set.
      */
-    "mainProject": "my-app"
+    // "mainProject": "@nd/cli"
   },
 
   {

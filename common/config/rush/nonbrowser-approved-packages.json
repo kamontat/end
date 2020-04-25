@@ -3,24 +3,32 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
+      "name": "@nd/dev-cli",
+      "allowedCategories": [ "libraries", "productions" ]
+    },
+    {
       "name": "@types/node",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "developments" ]
     },
     {
       "name": "colors",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "developments" ]
     },
     {
-      "name": "my-toolchain",
-      "allowedCategories": [ "production" ]
+      "name": "my-controls",
+      "allowedCategories": [ "productions" ]
     },
     {
       "name": "rimraf",
-      "allowedCategories": [ "tools" ]
+      "allowedCategories": [ "developments" ]
     },
     {
       "name": "typescript",
-      "allowedCategories": [ "production", "tools" ]
+      "allowedCategories": [ "developments", "libraries", "productions" ]
+    },
+    {
+      "name": "whatwg-fetch",
+      "allowedCategories": [ "productions" ]
     }
   ]
 }

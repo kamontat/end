@@ -1,5 +1,5 @@
 {
-  "name": "my-toolchain",
+  "name": "@nd/dev-cli",
   "version": "1.0.0",
   "description": "An example toolchain used to build projects in this repo",
   "license": "MIT",
@@ -8,15 +8,14 @@
     "my-bulk-command": "bin/my-bulk-command.js"
   },
   "scripts": {
-    "build": "rimraf ./lib/ && tsc",
-    "my-bulk-command": ""
+    "build": "rimraf ./lib/ && tsc"
   },
   "dependencies": {
-    "colors": "^1.3.2"
+    "colors": "1.4.0"
   },
   "devDependencies": {
-    "@types/node": "^10.9.4",
-    "rimraf": "^2.6.2",
-    "typescript": "^3.0.3"
+    "@types/node": "12.12.6",
+    "rimraf": "3.0.2",
+    "typescript": "3.8.3"
   }
 }

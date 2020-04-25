@@ -16,7 +16,7 @@
    * path segment in the "$schema" field for all your Rush config files.  This will ensure
    * correct error-underlining and tab-completion for editors such as VS Code.
    */
-  "rushVersion": "5.21.0",
+  "rushVersion": "5.23.2",
 
   /**
    * The next field selects which package manager should be installed and determines its version.
@@ -26,10 +26,10 @@
    * Specify one of: "pnpmVersion", "npmVersion", or "yarnVersion".  See the Rush documentation
    * for details about these alternatives.
    */
-  "pnpmVersion": "2.15.1",
+  "pnpmVersion": "4.14.0",
 
   // "npmVersion": "4.5.0",
-  // "yarnVersion": "1.9.4",
+  // "yarnVersion": "1.22.4",
 
   /**
    * Options that are only used when the PNPM package manager is selected
@@ -50,7 +50,7 @@
      *
      * The default value is "local".
      */
-    // "pnpmStore": "local",
+    "pnpmStore": "local",
 
     /**
      * If true, then Rush will add the "--strict-peer-dependencies" option when invoking PNPM.
@@ -64,7 +64,6 @@
      */
     "strictPeerDependencies": true,
 
-
     /**
      * Configures the strategy used to select versions during installation.
      *
@@ -77,7 +76,7 @@
      * After modifying this field, it's recommended to run "rush update --full" so that the package manager
      * will recalculate all version selections.
      */
-    // "resolutionStrategy": "fast"
+    "resolutionStrategy": "fast"
   },
 
   /**
@@ -88,19 +87,19 @@
    * Specify a SemVer range to ensure developers use a Node.js version that is appropriate
    * for your repo.
    */
-  "nodeSupportedVersionRange": ">=10.13.0 <11.0.0",
+  "nodeSupportedVersionRange": ">10.0.0 <14.0.0",
 
   /**
-  * Odd-numbered major versions of Node.js are experimental.  Even-numbered releases
-  * spend six months in a stabilization period before the first Long Term Support (LTS) version.
-  * For example, 8.9.0 was the first LTS version of Node.js 8.  Pre-LTS versions are not recommended
-  * for production usage because they frequently have bugs.  They may cause Rush itself
-  * to malfunction.
-  *
-  * Rush normally prints a warning if it detects a pre-LTS Node.js version.  If you are testing
-  * pre-LTS versions in preparation for supporting the first LTS version, you can use this setting
-  * to disable Rush's warning.
-  */
+   * Odd-numbered major versions of Node.js are experimental.  Even-numbered releases
+   * spend six months in a stabilization period before the first Long Term Support (LTS) version.
+   * For example, 8.9.0 was the first LTS version of Node.js 8.  Pre-LTS versions are not recommended
+   * for production usage because they frequently have bugs.  They may cause Rush itself
+   * to malfunction.
+   *
+   * Rush normally prints a warning if it detects a pre-LTS Node.js version.  If you are testing
+   * pre-LTS versions in preparation for supporting the first LTS version, you can use this setting
+   * to disable Rush's warning.
+   */
   // "suppressNodeLtsWarning": false,
 
   /**
@@ -114,7 +113,7 @@
    * version. In those cases, you will need to add an entry to the "allowedAlternativeVersions"
    * section of the common-versions.json.
    */
-   // "ensureConsistentVersions": true,
+  // "ensureConsistentVersions": true,
 
   /**
    * Large monorepos can become intimidating for newcomers if project folder paths don't follow
@@ -164,9 +163,10 @@
      */
     "reviewCategories": [
       // Some example categories:
-      "production", // projects that ship to production
-      "tools",      // non-shipping projects that are part of the developer toolchain
-      "prototypes"  // experiments that should mostly be ignored by the review process
+      "productions", // projects that ship to production
+      "libraries", // internal libraries for production application
+      "developments", // non-shipping projects that are part of the developer toolchain
+      "prototypes" // experiments that should mostly be ignored by the review process
     ],
 
     /**
@@ -175,7 +175,7 @@
      * if the underlying package was already approved, this would imply that the typings
      * are also approved.
      */
-    // "ignoredNpmScopes": [ "@types" ]
+    "ignoredNpmScopes": ["@types"]
   },
 
   /**
@@ -194,17 +194,17 @@
      * IMPORTANT: Because these are regular expressions encoded as JSON string literals,
      * RegExp escapes need two backspashes, and ordinary periods should be "\\.".
      */
-    "allowedEmailRegExps": [
-      "[^@]+@users\\.noreply\\.github\\.com",
-      "travis@example\\.org"
-    ],
+    // "allowedEmailRegExps": [
+    //   "[^@]+@users\\.noreply\\.github\\.com",
+    //   "travis@example\\.org"
+    // ],
 
     /**
      * When Rush reports that the address is malformed, the notice can include an example
      * of a recommended email.  Make sure it conforms to one of the allowedEmailRegExps
      * expressions.
      */
-    "sampleEmail": "mrexample@users.noreply.github.com",
+    // "sampleEmail": "mrexample@users.noreply.github.com",
 
     /**
      * The commit message to use when committing changes during 'rush publish'.
@@ -233,13 +233,11 @@
      * to retrieve the latest activity for the remote master branch.
      */
     // "url": "https://github.com/microsoft/rush-example",
-
     /**
      * The default branch name. This tells "rush change" which remote branch to compare against.
      * The default value is "master"
      */
     // "defaultBranch": "master",
-
     /**
      * The default remote. This tells "rush change" which remote to compare against if the remote URL is
      * not set or if a remote matching the provided remote URL is not found.
@@ -297,7 +295,7 @@
     //    * The folder name for this variant.
     //    */
     //   "variantName": "old-sdk",
-    // 
+    //
     //   /**
     //    * An informative description
     //    */
@@ -335,60 +333,31 @@
       /**
        * The NPM package name of the project (must match package.json)
        */
-      "packageName": "my-app",
+      "packageName": "@nd/cli",
 
       /**
        * The path to the project folder, relative to the rush.json config file.
        */
-      "projectFolder": "apps/my-app",
+      "projectFolder": "apps/cli",
 
       /**
        * An optional category for usage in the "browser-approved-packages.json"
        * and "nonbrowser-approved-packages.json" files.  The value must be one of the
        * strings from the "reviewCategories" defined above.
        */
-      "reviewCategory": "production",
-
-      /**
-       * A list of local projects that appear as devDependencies for this project, but cannot be
-       * locally linked because it would create a cyclic dependency; instead, the last published
-       * version will be installed in the Common folder.
-       */
-      "cyclicDependencyProjects": [
-        // "my-toolchain"
-      ],
-
-      /**
-       * If true, then this project will be ignored by the "rush check" command.
-       * The default value is false.
-       */
-      // "skipRushCheck": false,
-
-      /**
-       * A flag indicating that changes to this project will be published to npm, which affects
-       * the Rush change and publish workflows. The default value is false.
-       * NOTE: "versionPolicyName" and "shouldPublish" are alternatives; you cannot specify them both.
-       */
-      // "shouldPublish": false,
-
-      /**
-       * An optional version policy associated with the project.  Version policies are defined
-       * in "version-policies.json" file.  See the "rush publish" documentation for more info.
-       * NOTE: "versionPolicyName" and "shouldPublish" are alternatives; you cannot specify them both.
-       */
-      // "versionPolicyName": ""
+      "reviewCategory": "productions"
     },
 
     {
-      "packageName": "my-controls",
-      "projectFolder": "libraries/my-controls",
-      "reviewCategory": "production"
+      "packageName": "@nd/lib-controller",
+      "projectFolder": "libs/controller",
+      "reviewCategory": "libraries"
     },
 
     {
-      "packageName": "my-toolchain",
-      "projectFolder": "tools/my-toolchain",
-      "reviewCategory": "tools"
+      "packageName": "@nd/dev-cli",
+      "projectFolder": "dev/cli",
+      "reviewCategory": "developments"
     }
   ]
 }

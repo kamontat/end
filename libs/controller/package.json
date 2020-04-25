@@ -1,5 +1,5 @@
 {
-  "name": "my-controls",
+  "name": "@nd/lib-controller",
   "version": "1.0.0",
   "description": "An example library project",
   "license": "MIT",
@@ -11,7 +11,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "my-toolchain": "^1.0.0",
-    "typescript": "^3.0.3"
+    "@nd/dev-cli": "1.0.0",
+    "typescript": "3.8.3"
   }
 }
