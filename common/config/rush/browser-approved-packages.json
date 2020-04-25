@@ -15,8 +15,16 @@
       "allowedCategories": [ "productions" ]
     },
     {
+      "name": "debug",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
       "name": "gulp",
       "allowedCategories": [ "developments", "libraries" ]
+    },
+    {
+      "name": "jest",
+      "allowedCategories": [ "prototypes" ]
     },
     {
       "name": "mocha",
@@ -37,6 +45,10 @@
     {
       "name": "webpack-cli",
       "allowedCategories": [ "developments" ]
+    },
+    {
+      "name": "winston",
+      "allowedCategories": [ "prototypes" ]
     }
   ]
 }

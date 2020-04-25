@@ -1,7 +1,7 @@
 {
-  "name": "@nd/lib-controller",
+  "name": "@nd/lib-error",
   "version": "1.0.0",
-  "description": "An example library project",
+  "description": "error management",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {

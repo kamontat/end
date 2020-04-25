@@ -5,9 +5,12 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "build": "node_modules/.bin/compiler"
+    "build": "node_modules/.bin/nd-compiler",
+    "clean": "node_modules/.bin/nd-cleaner"
   },
-  "dependencies": {},
+  "dependencies": {
+    "winston": "3.2.1"
+  },
   "devDependencies": {
     "@nd/dev-cli": "1.0.0"
   }

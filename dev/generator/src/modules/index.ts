@@ -1,5 +1,5 @@
 import { NodePlopAPI } from "plop";
-import { index, pjson, tsconfig, rushjson, templates } from "./constants";
+import { index, pjson, tsconfig, rushjson, templates, gulpfile } from "./constants";
 import { join } from "path";
 
 export default (plop: NodePlopAPI) => {
@@ -52,23 +52,28 @@ export default (plop: NodePlopAPI) => {
       {
         type: "add",
         path: index,
-        templateFile: join(templates, "modules", "index.hbs"),
+        templateFile: join(templates, "index.hbs"),
       },
       {
         type: "add",
         path: pjson,
-        templateFile: join(templates, "modules", "package.hbs"),
+        templateFile: join(templates, "package.hbs"),
       },
       {
         type: "add",
         path: tsconfig,
-        templateFile: join(templates, "modules", "tsconfig.hbs"),
+        templateFile: join(templates, "tsconfig.hbs"),
+      },
+      {
+        type: "add",
+        path: gulpfile,
+        templateFile: join(templates, "gulpfile.hbs"),
       },
       {
         type: "append",
         pattern: "/*APPEND_HERE*/",
         path: rushjson,
-        templateFile: join(templates, "modules", "rushjson.hbs"),
+        templateFile: join(templates, "rushjson.hbs"),
       },
     ],
   });

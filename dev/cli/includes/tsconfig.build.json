@@ -8,7 +8,20 @@
     "esModuleInterop": true,
     "module": "commonjs",
     "target": "es6",
-    "lib": ["dom", "es5", "es2015.collection", "es2015.iterable", "es2015.promise"]
+    "lib": ["dom", "es5", "es2015.collection", "es2015.iterable", "es2015.promise"],
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/@nd/dev-cli/node_modules/@types",
+      "../node_modules/@types",
+      "../node_modules/@nd/dev-cli/node_modules/@types",
+      "../../node_modules/@types",
+      "../../node_modules/@nd/dev-cli/node_modules/@types",
+      "../../../node_modules/@types",
+      "../../../node_modules/@nd/dev-cli/node_modules/@types",
+      "../../../../node_modules/@types",
+      "../../../../node_modules/@nd/dev-cli/node_modules/@types"
+    ],
+    "types": ["node", "jest"]
   },
   "include": ["../../../../src/**/*.ts"],
   "exclude": ["../../../../node_modules", "../../../../lib"]
