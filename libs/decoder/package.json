@@ -1,39 +1,14 @@
 {
-  "name": "@nd/lib-controller",
+  "name": "@nd/lib-decoder",
   "version": "1.0.0",
-  "description": "An example library project",
-  "license": "MIT",
+  "description": "string decoder to resolve unicode problem",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
     "build": "node_modules/.bin/compiler"
   },
-  "dependencies": {
-    "iconv-lite": "0.5.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@nd/dev-cli": "1.0.0"
-  },
-  "changelogs": [
-    {
-      "version": "1.0.2",
-      "message": "change package name from nd-decoder to @nd/decoder",
-      "date": "28 Sep 2019"
-    },
-    {
-      "version": "1.0.1",
-      "message": "make it more lightweight :)",
-      "date": "30 Aug 2019"
-    },
-    {
-      "version": "1.0.0",
-      "message": "support every encode format in iconv-lite",
-      "date": "15 Jul 2019"
-    },
-    {
-      "version": "0.1.0",
-      "message": "implement to support encode utf-8 and tis-620",
-      "date": "12 Jul 2019"
-    }
-  ]
+  }
 }

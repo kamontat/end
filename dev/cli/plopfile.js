@@ -5,15 +5,34 @@ module.exports = function (
   plop
 ) {
 
-  const root = path.join(__dirname, "..", "..", "{{category}}", "{{name}}")
-  const index = path.join(root, "src", "index.ts")
-  const package = path.join(root, "package.json")
-  const tsconfig = path.join(root, "tsconfig.json")
+  const root = path.join(__dirname, "..", "..")
+  const app = path.join(root, "{{category}}", "{{name}}")
+  const rushjson = path.join(root, "rush.json")
+
+  const index = path.join(app, "src", "index.ts")
+  const package = path.join(app, "package.json")
+  const tsconfig = path.join(app, "tsconfig.json")
 
   plop.addHelper("to_module", (category, name) => {
     if (category === "apps") return name
     else if (category === "libs") return `lib-${name}`
     else return `${category}-${name}`
+  })
+
+  plop.addHelper("to_review", (category) => {
+    switch (category) {
+      case "apps":
+        return "productions"
+        break
+      case "libs":
+        return "libraries"
+        break
+      case "dev":
+        return "developments"
+        break
+      default:
+        return "prototypes"
+    }
   })
 
   // create your generators here
@@ -47,6 +66,11 @@ module.exports = function (
       type: 'add',
       path: tsconfig,
       templateFile: 'templates/modules/tsconfig.hbs'
+    }, {
+      type: "append",
+      pattern: "\/\*APPEND_HERE\*\/",
+      path: rushjson,
+      templateFile: "templates/modules/rushjson.hbs"
     }]
   });
 };

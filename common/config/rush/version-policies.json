@@ -26,7 +26,7 @@
      * This name is also used command-line parameters such as "--version-policy"
      * and "--to-version-policy".
      */
-    "policyName": "MyBigFramework",
+    "policyName": "Application",
 
     /**
      * (Required) The current version.  All packages belonging to the set should have this version
@@ -67,7 +67,7 @@
      */
     "definitionName": "individualVersion",
 
-    "policyName": "MyRandomLibraries",
+    "policyName": "Libraries",
 
     /**
      * (Optional) This can be used to enforce that all packages in the set must share a common
