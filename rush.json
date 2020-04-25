@@ -330,21 +330,8 @@
    */
   "projects": [
     {
-      /**
-       * The NPM package name of the project (must match package.json)
-       */
       "packageName": "@nd/cli",
-
-      /**
-       * The path to the project folder, relative to the rush.json config file.
-       */
       "projectFolder": "apps/cli",
-
-      /**
-       * An optional category for usage in the "browser-approved-packages.json"
-       * and "nonbrowser-approved-packages.json" files.  The value must be one of the
-       * strings from the "reviewCategories" defined above.
-       */
       "reviewCategory": "productions"
     },
 

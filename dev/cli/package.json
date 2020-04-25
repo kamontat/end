@@ -5,22 +5,31 @@
   "license": "MIT",
   "bin": {
     "compiler": "bin/compiler.js",
-    "my-bulk-command": "bin/my-bulk-command.js"
+    "generate-module": "bin/generate-module.js"
   },
   "scripts": {
-    "build": "rimraf ./lib/ && tsc",
-    "gulp": "gulp"
+    "build": "gulp",
+    "gen": "plop"
   },
   "dependencies": {
     "colors": "1.4.0"
   },
   "devDependencies": {
+    "@microsoft/node-library-build": "6.4.10",
+    "@microsoft/rush-stack-compiler-3.7": "0.2.9",
     "@types/node": "12.12.6",
+    "@types/mocha": "7.0.2",
     "rimraf": "3.0.2",
     "typescript": "3.8.3",
-    "@microsoft/node-library-build": "6.4.10",
     "gulp": "4.0.2",
-    "@microsoft/rush-stack-compiler-3.7": "0.2.9",
-    "@types/mocha": "7.0.2"
-  }
+    "mocha": "7.1.1",
+    "plop": "2.6.0"
+  },
+  "changelogs": [
+    {
+      "version": "1.0.0",
+      "message": "support typescript linter and mocha test",
+      "date": "25 Apr 2020"
+    }
+  ]
 }

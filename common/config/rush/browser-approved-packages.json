@@ -19,6 +19,10 @@
       "allowedCategories": [ "developments" ]
     },
     {
+      "name": "mocha",
+      "allowedCategories": [ "developments" ]
+    },
+    {
       "name": "ts-loader",
       "allowedCategories": [ "developments" ]
     },

@@ -1,0 +1,36 @@
+version: 4
+commit:
+  keys:
+    - type: feat
+      value: Introducing new features.
+    - type: impr
+      value: Improving user experience / usability / reliablity.
+    - type: fix
+      value: Fixing a bug.
+    - type: refac
+      value: A code change that neither fixes a bug nor adds a feature.
+    - type: chore
+      value: Other changes that don't modify src or test files.
+  scopes:
+    - type: website
+      value: application (website)
+    - type: cli
+      value: application (commandline)
+    - type: decoder
+      value: modules (decoder)
+    - type: dev
+      value: development setup
+  titles:
+    - type: Start new project
+      value: Start new project
+branch:
+  keys:
+    - type: feat
+      value: Introducing new features or project enhancement.
+    - type: impr
+      value: Improving user experience / usability / performance.
+    - type: fix
+      value: Fixing a bug.
+  titles:
+    - type: config
+      value: Configuration
