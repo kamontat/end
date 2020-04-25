@@ -4,12 +4,10 @@
   "description": "An example toolchain used to build projects in this repo",
   "license": "MIT",
   "bin": {
-    "compiler": "bin/compiler.js",
-    "generate-module": "bin/generate-module.js"
+    "compiler": "bin/compiler.js"
   },
   "scripts": {
-    "build": "gulp",
-    "gen": "plop"
+    "build": "gulp"
   },
   "dependencies": {
     "colors": "1.4.0"
@@ -22,7 +20,6 @@
     "rimraf": "3.0.2",
     "typescript": "3.8.3",
     "gulp": "4.0.2",
-    "mocha": "7.1.1",
-    "plop": "2.6.0"
+    "mocha": "7.1.1"
   }
 }

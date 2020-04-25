@@ -1,5 +1,0 @@
-export default class Index {
-  constructor() {
-    console.log("hello from decoder")
-  }
-}

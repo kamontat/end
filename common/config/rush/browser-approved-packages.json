@@ -23,6 +23,10 @@
       "allowedCategories": [ "developments" ]
     },
     {
+      "name": "plop",
+      "allowedCategories": [ "developments", "prototypes" ]
+    },
+    {
       "name": "ts-loader",
       "allowedCategories": [ "developments" ]
     },

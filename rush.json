@@ -334,6 +334,13 @@
       "projectFolder": "apps/cli",
       "reviewCategory": "productions"
     },
+
+    /*APPEND_HERE*/
+    {
+      "packageName": "@nd/dev-generator",
+      "projectFolder": "dev/generator",
+      "reviewCategory": "prototypes"
+    },
     {
       "packageName": "@nd/lib-controller",
       "projectFolder": "libs/controller",
@@ -343,6 +350,6 @@
       "packageName": "@nd/dev-cli",
       "projectFolder": "dev/cli",
       "reviewCategory": "developments"
-    }/*APPEND_HERE*/
+    }
   ]
 }

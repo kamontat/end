@@ -3,6 +3,7 @@ dependencies:
   '@microsoft/rush-stack-compiler-3.7': 0.2.9
   '@rush-temp/cli': 'file:projects/cli.tgz'
   '@rush-temp/dev-cli': 'file:projects/dev-cli.tgz'
+  '@rush-temp/dev-generator': 'file:projects/dev-generator.tgz'
   '@rush-temp/lib-controller': 'file:projects/lib-controller.tgz'
   '@types/mocha': 7.0.2
   '@types/node': 12.12.6
@@ -9064,8 +9065,17 @@ packages:
     dev: false
     name: '@rush-temp/dev-cli'
     resolution:
-      integrity: sha512-TvYCP3S1cvFg5Kb2VNp9sv5iJSFlTPDwOyK1wG8qah3TIXtm5AGSINFUrBYGFQJk4WQ1kfsNATPcWQWPWqJz0w==
+      integrity: sha512-vIb9iC0b+05Olv3tCHf23A+VdGRy2PCEskmJaK1BngavYJz1zXPT/nsbxAS5sIOdxAj8Eq/Bm2ZYbveKBH907A==
       tarball: 'file:projects/dev-cli.tgz'
+    version: 0.0.0
+  'file:projects/dev-generator.tgz':
+    dependencies:
+      plop: 2.6.0
+    dev: false
+    name: '@rush-temp/dev-generator'
+    resolution:
+      integrity: sha512-gFXM6gTJPxbtp4z4IKHSbrZmyEJXyoPS1d/dkpTji/IKZs12a1vlKm26B3TQItppfg78H+SD89nqWYMz2uCV/g==
+      tarball: 'file:projects/dev-generator.tgz'
     version: 0.0.0
   'file:projects/lib-controller.tgz':
     dependencies:
@@ -9082,6 +9092,7 @@ specifiers:
   '@microsoft/rush-stack-compiler-3.7': 0.2.9
   '@rush-temp/cli': 'file:./projects/cli.tgz'
   '@rush-temp/dev-cli': 'file:./projects/dev-cli.tgz'
+  '@rush-temp/dev-generator': 'file:./projects/dev-generator.tgz'
   '@rush-temp/lib-controller': 'file:./projects/lib-controller.tgz'
   '@types/mocha': 7.0.2
   '@types/node': 12.12.6

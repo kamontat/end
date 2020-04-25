@@ -1,2 +1,2 @@
 gen:
-	cd dev/cli && rushx gen
+	cd dev/generator && rushx gen

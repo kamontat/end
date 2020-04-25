@@ -1,0 +1,16 @@
+{
+  "name": "@nd/dev-generator",
+  "version": "1.0.0",
+  "description": "files generator for nd and submodules",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build": "node_modules/.bin/compiler",
+    "gen": "plop --plopfile lib/plopfile.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@nd/dev-cli": "1.0.0",
+    "plop": "2.6.0"
+  }
+}
