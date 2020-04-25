@@ -1,8 +1,11 @@
-export const root = path.join(__dirname, "..", "..");
+import { resolve } from "path";
 
-export const app = path.join(root, "{{category}}", "{{name}}");
-export const rushjson = path.join(root, "rush.json");
+export const templates = resolve(__dirname, "..", "..", "templates");
+export const root = resolve(__dirname, "..", "..", "..", "..");
 
-export const index = path.join(app, "src", "index.ts");
-export const package = path.join(app, "package.json");
-export const tsconfig = path.join(app, "tsconfig.json");
+export const app = resolve(root, "{{category}}", "{{name}}");
+export const rushjson = resolve(root, "rush.json");
+
+export const index = resolve(app, "src", "index.ts");
+export const pjson = resolve(app, "package.json");
+export const tsconfig = resolve(app, "tsconfig.json");

@@ -5,12 +5,14 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "build": "node_modules/.bin/compiler",
+    "build": "node_modules/.bin/nd-compiler",
+    "clean": "node_modules/.bin/nd-cleaner",
     "gen": "plop --plopfile lib/plopfile.js"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "@nd/dev-cli": "1.0.0",
+  "dependencies": {
     "plop": "2.6.0"
+  },
+  "devDependencies": {
+    "@nd/dev-cli": "1.0.0"
   }
 }

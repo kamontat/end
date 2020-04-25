@@ -4,7 +4,8 @@
   "description": "An example application that consumes the my-controls library",
   "license": "MIT",
   "scripts": {
-    "build": "node_modules/.bin/compiler"
+    "build": "node_modules/.bin/nd-compiler",
+    "clean": "node_modules/.bin/nd-cleaner"
   },
   "dependencies": {
     "@nd/lib-controller": "1.0.0",

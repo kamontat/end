@@ -16,6 +16,14 @@
       "name": "gen",
       "summary": "use plopjs to generate new modules",
       "shellCommand": "make gen"
+    },
+    {
+      "commandKind": "bulk",
+      "name": "clean",
+      "summary": "clean log and compiled js",
+      "ignoreDependencyOrder": true,
+      "enableParallelism": true,
+      "ignoreMissingScript": true
     }
   ],
 

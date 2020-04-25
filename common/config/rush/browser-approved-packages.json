@@ -4,11 +4,11 @@
   "packages": [
     {
       "name": "@microsoft/node-library-build",
-      "allowedCategories": [ "developments" ]
+      "allowedCategories": [ "developments", "libraries" ]
     },
     {
       "name": "@microsoft/rush-stack-compiler-3.7",
-      "allowedCategories": [ "developments" ]
+      "allowedCategories": [ "developments", "libraries" ]
     },
     {
       "name": "@nd/lib-controller",
@@ -16,11 +16,11 @@
     },
     {
       "name": "gulp",
-      "allowedCategories": [ "developments" ]
+      "allowedCategories": [ "developments", "libraries" ]
     },
     {
       "name": "mocha",
-      "allowedCategories": [ "developments" ]
+      "allowedCategories": [ "developments", "libraries" ]
     },
     {
       "name": "plop",
