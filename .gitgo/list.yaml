@@ -20,6 +20,8 @@ commit:
       value: modules (decoder)
     - type: dev
       value: development setup
+    - type: docs
+      value: documentation
   titles:
     - type: Start new project
       value: Start new project
