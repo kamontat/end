@@ -1,0 +1,46 @@
+version: 2.1
+
+executors:
+  node12:
+    working_directory: /home/circleci/nd
+    docker:
+      - image: cimg/node:12.16
+    environment:
+      CI: "true"
+      ENV: "ci"
+      APP: /home/circleci/nd
+      CACHE: /tmp/caches
+
+commands:
+  info:
+    description: Start workflow
+    steps:
+      - hello/circleci-env-highlights
+      - hello/system-info
+
+orbs:
+  hello: circleci/hello-build@0.0.14
+  codecov: codecov/codecov@1.0.5
+  sonarcloud: sonarsource/sonarcloud@1.0.1
+
+jobs:
+  main:
+    executor: node12
+    steps:
+      - checkout
+      - info
+      - run:
+          name: Checking for missing change logs...
+          command: node common/scripts/install-run-rush.js change -v
+      - run:
+          name: Installing...
+          command: node common/scripts/install-run-rush.js install
+      - run:
+          name: Building...
+          command: node common/scripts/install-run-rush.js rebuild --verbose
+
+workflows:
+  version: 2
+  default:
+    jobs:
+      - main
