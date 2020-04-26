@@ -13,3 +13,5 @@ export const gulpfile = resolve(app, "gulpfile.js");
 
 export const eslintrc = resolve(app, ".eslintrc.js");
 export const eslintignore = resolve(app, ".eslintignore");
+
+export const npmignore = resolve(app, ".npmignore");
