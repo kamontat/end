@@ -1,5 +1,5 @@
 import { NodePlopAPI } from "plop";
-import { index, pjson, tsconfig, rushjson, templates, gulpfile } from "./constants";
+import { index, pjson, tsconfig, rushjson, templates, gulpfile, eslintignore, eslintrc } from "./constants";
 import { join } from "path";
 
 export default (plop: NodePlopAPI) => {
@@ -68,6 +68,16 @@ export default (plop: NodePlopAPI) => {
         type: "add",
         path: gulpfile,
         templateFile: join(templates, "gulpfile.hbs"),
+      },
+      {
+        type: "add",
+        path: eslintrc,
+        templateFile: join(templates, "eslintrc.hbs"),
+      },
+      {
+        type: "add",
+        path: eslintignore,
+        templateFile: join(templates, "eslintignore.hbs"),
       },
       {
         type: "append",

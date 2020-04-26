@@ -10,3 +10,6 @@ export const index = resolve(app, "src", "index.ts");
 export const pjson = resolve(app, "package.json");
 export const tsconfig = resolve(app, "tsconfig.json");
 export const gulpfile = resolve(app, "gulpfile.js");
+
+export const eslintrc = resolve(app, ".eslintrc.js");
+export const eslintignore = resolve(app, ".eslintignore");

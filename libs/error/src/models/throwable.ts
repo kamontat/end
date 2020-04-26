@@ -17,7 +17,7 @@ export default class Throwable extends Error {
     return new Throwable(state.code, state.name, message, undefined, state.type === ThrowStateType.WARN ? false : true);
   }
 
-  static from<E extends Error>(error: E, deadly: boolean = true): Throwable {
+  static from<E extends Error>(error: E, deadly = true): Throwable {
     if (error instanceof Throwable) return error;
     return new Throwable(-1, error.name, error.message, error.stack, deadly);
   }
@@ -35,13 +35,13 @@ export default class Throwable extends Error {
     const orig = Error.prepareStackTrace; // save original prepare method
     Error.prepareStackTrace = (_, stack) => stack;
     Error.captureStackTrace(obj, Throwable);
-    const __stack: NodeJS.CallSite[] = obj.stack as any;
+    const rawStack: NodeJS.CallSite[] = obj.stack as any; // eslint-disable-line @typescript-eslint/no-explicit-any
     Error.prepareStackTrace = orig; // revert original method
 
     // Lets make our JSON object.
     this._stack = [];
-    for (var i = 0; i < __stack.length; i++) {
-      var frame = __stack[i];
+    for (let i = 0; i < rawStack.length; i++) {
+      const frame = rawStack[i];
       this._stack.push({
         path: new Paths(frame.getFileName()),
         typename: frame.getTypeName(),
