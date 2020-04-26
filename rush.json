@@ -138,8 +138,8 @@
    * To remove these restrictions, you could set projectFolderMinDepth=1
    * and set projectFolderMaxDepth to a large number.
    */
-  // "projectFolderMinDepth": 2,
-  // "projectFolderMaxDepth": 2,
+  "projectFolderMinDepth": 2,
+  "projectFolderMaxDepth": 2,
 
   /**
    * This feature helps you to review and approve new packages before they are introduced
@@ -332,44 +332,58 @@
     {
       "packageName": "@nd/cli",
       "projectFolder": "apps/cli",
-      "reviewCategory": "productions"
+      "reviewCategory": "productions",
+      "versionPolicyName": "Application"
     },
 
     /*APPEND_HERE*/
     {
+      "packageName": "@nd/dev-graph",
+      "projectFolder": "dev/graph",
+      "reviewCategory": "prototypes",
+      "versionPolicyName": "Libraries"
+    },
+    {
       "packageName": "@nd/dev-linter",
       "projectFolder": "dev/linter",
-      "reviewCategory": "prototypes"
+      "reviewCategory": "prototypes",
+      "versionPolicyName": "Libraries"
     },
     {
       "packageName": "@nd/dev-utils",
       "projectFolder": "dev/utils",
-      "reviewCategory": "prototypes"
+      "reviewCategory": "prototypes",
+      "versionPolicyName": "Libraries"
     },
     {
       "packageName": "@nd/dev-testbox",
       "projectFolder": "dev/testbox",
-      "reviewCategory": "prototypes"
+      "reviewCategory": "prototypes",
+      "versionPolicyName": "Libraries"
     },
     {
       "packageName": "@nd/lib-error",
       "projectFolder": "libs/error",
-      "reviewCategory": "prototypes"
+      "reviewCategory": "prototypes",
+      "versionPolicyName": "Libraries"
     },
     {
       "packageName": "@nd/lib-logger",
       "projectFolder": "libs/logger",
-      "reviewCategory": "prototypes"
+      "reviewCategory": "prototypes",
+      "versionPolicyName": "Libraries"
     },
     {
       "packageName": "@nd/dev-generator",
       "projectFolder": "dev/generator",
-      "reviewCategory": "developments"
+      "reviewCategory": "developments",
+      "versionPolicyName": "Libraries"
     },
     {
       "packageName": "@nd/dev-cli",
       "projectFolder": "dev/cli",
-      "reviewCategory": "developments"
+      "reviewCategory": "developments",
+      "versionPolicyName": "Libraries"
     }
   ]
 }
