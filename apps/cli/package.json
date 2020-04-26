@@ -1,6 +1,6 @@
 {
 	"name": "@nmsys/cli",
-	"version": "1.0.0",
+	"version": "1.0.1-0",
 	"description": "An example application that consumes the my-controls library",
 	"main": "lib/index.js",
 	"typings": "lib/index.d.ts",

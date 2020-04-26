@@ -12,7 +12,7 @@
   {
     "definitionName": "lockStepVersion",
     "policyName": "Application",
-    "version": "1.0.0",
+    "version": "1.0.1-0",
     "nextBump": "prerelease"
   },
   {

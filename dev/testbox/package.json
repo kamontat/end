@@ -1,22 +1,22 @@
 {
-  "name": "@nmsys/dev-testbox",
-  "version": "1.0.0",
-  "description": "testing in a box",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
-  "scripts": {
-    "build": "node_modules/.bin/nd-compiler",
-    "clean": "node_modules/.bin/nd-cleaner"
-  },
-  "dependencies": {
-    "@types/node": "12.12.6",
-    "@types/mocha": "7.0.2",
-    "@types/chai": "4.2.11",
-    "chai": "4.2.0",
-    "@types/sinon": "9.0.0",
-    "sinon": "9.0.2"
-  },
-  "devDependencies": {
-    "@nmsys/dev-cli": "1.0.0"
-  }
+	"name": "@nmsys/dev-testbox",
+	"version": "1.0.0",
+	"description": "testing in a box",
+	"main": "lib/index.js",
+	"typings": "lib/index.d.ts",
+	"scripts": {
+		"build": "node_modules/.bin/nd-compiler",
+		"clean": "node_modules/.bin/nd-cleaner"
+	},
+	"dependencies": {
+		"@types/chai": "4.2.11",
+		"@types/mocha": "7.0.2",
+		"@types/node": "12.12.6",
+		"@types/sinon": "9.0.0",
+		"chai": "4.2.0",
+		"sinon": "9.0.2"
+	},
+	"devDependencies": {
+		"@nmsys/dev-cli": "1.0.0"
+	}
 }

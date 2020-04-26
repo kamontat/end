@@ -1,21 +1,21 @@
 {
-  "name": "@nmsys/dev-linter",
-  "version": "1.0.0",
-  "description": "eslint configuration and prettier",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
-  "scripts": {
-    "build": "node_modules/.bin/nd-compiler",
-    "clean": "node_modules/.bin/nd-cleaner"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "2.29.0",
-    "@typescript-eslint/parser": "2.29.0",
-    "@nmsys/dev-cli": "1.0.0",
-    "@nmsys/dev-testbox": "1.0.0",
-    "eslint-config-prettier": "6.11.0",
-    "eslint-plugin-prettier": "3.1.3",
-    "prettier": "2.0.5",
-    "eslint": "6.8.0"
-  }
+	"name": "@nmsys/dev-linter",
+	"version": "1.0.0",
+	"description": "eslint configuration and prettier",
+	"main": "lib/index.js",
+	"typings": "lib/index.d.ts",
+	"scripts": {
+		"build": "node_modules/.bin/nd-compiler",
+		"clean": "node_modules/.bin/nd-cleaner"
+	},
+	"devDependencies": {
+		"@nmsys/dev-cli": "1.0.0",
+		"@nmsys/dev-testbox": "1.0.0",
+		"@typescript-eslint/eslint-plugin": "2.29.0",
+		"@typescript-eslint/parser": "2.29.0",
+		"eslint": "6.8.0",
+		"eslint-config-prettier": "6.11.0",
+		"eslint-plugin-prettier": "3.1.3",
+		"prettier": "2.0.5"
+	}
 }
