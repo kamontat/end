@@ -12,6 +12,7 @@
     "winston": "3.2.1"
   },
   "devDependencies": {
-    "@nd/dev-cli": "1.0.0"
+    "@nd/dev-cli": "1.0.0",
+    "@nd/dev-testbox": "1.0.0"
   }
 }

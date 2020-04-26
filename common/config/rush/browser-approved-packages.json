@@ -11,12 +11,52 @@
       "allowedCategories": [ "developments", "libraries" ]
     },
     {
+      "name": "@nd/dev-linter",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "@nd/dev-testbox",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "@nd/dev-utils",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
       "name": "@nd/lib-controller",
       "allowedCategories": [ "productions" ]
     },
     {
+      "name": "@rushstack/eslint-config",
+      "allowedCategories": [ "developments", "prototypes" ]
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "chai",
+      "allowedCategories": [ "developments", "prototypes" ]
+    },
+    {
       "name": "debug",
       "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "eslint",
+      "allowedCategories": [ "developments", "prototypes" ]
+    },
+    {
+      "name": "eslint-config-prettier",
+      "allowedCategories": [ "developments", "prototypes" ]
+    },
+    {
+      "name": "eslint-plugin-prettier",
+      "allowedCategories": [ "developments", "prototypes" ]
     },
     {
       "name": "gulp",
@@ -24,7 +64,7 @@
     },
     {
       "name": "jest",
-      "allowedCategories": [ "prototypes" ]
+      "allowedCategories": [ "developments", "prototypes" ]
     },
     {
       "name": "mocha",
@@ -32,6 +72,14 @@
     },
     {
       "name": "plop",
+      "allowedCategories": [ "developments", "prototypes" ]
+    },
+    {
+      "name": "prettier",
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "sinon",
       "allowedCategories": [ "developments", "prototypes" ]
     },
     {

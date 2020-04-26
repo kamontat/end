@@ -10,6 +10,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@nd/dev-cli": "1.0.0"
+    "@nd/dev-cli": "1.0.0",
+    "@nd/dev-testbox": "1.0.0",
+    "@nd/dev-utils": "1.0.0",
+    "@nd/dev-linter": "1.0.0"
   }
 }

@@ -337,6 +337,21 @@
 
     /*APPEND_HERE*/
     {
+      "packageName": "@nd/dev-linter",
+      "projectFolder": "dev/linter",
+      "reviewCategory": "prototypes"
+    },
+    {
+      "packageName": "@nd/dev-utils",
+      "projectFolder": "dev/utils",
+      "reviewCategory": "prototypes"
+    },
+    {
+      "packageName": "@nd/dev-testbox",
+      "projectFolder": "dev/testbox",
+      "reviewCategory": "prototypes"
+    },
+    {
       "packageName": "@nd/lib-error",
       "projectFolder": "libs/error",
       "reviewCategory": "prototypes"

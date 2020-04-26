@@ -1,0 +1,8 @@
+digraph {
+  <dev-cli> -> <dev-generator>
+  <dev-cli> -> <lib-logger>
+  <dev-testbox> -> <lib-logger>
+  <dev-cli> -> <lib-error>
+  <dev-testbox> -> <lib-error>
+  <lib-error> -> <lib-logger>
+}

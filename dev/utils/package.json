@@ -1,7 +1,7 @@
 {
-  "name": "@nd/{{to_module category name}}",
+  "name": "@nd/dev-utils",
   "version": "1.0.0",
-  "description": "{{description}}",
+  "description": "utils method for development",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
