@@ -1,5 +1,5 @@
 {
-  "name": "@nd/dev-utils",
+  "name": "@nmsys/dev-utils",
   "version": "1.0.0",
   "description": "utils method for development",
   "main": "lib/index.js",
@@ -10,7 +10,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@nd/dev-cli": "1.0.0",
-    "@nd/dev-testbox": "1.0.0"
+    "@nmsys/dev-cli": "1.0.0",
+    "@nmsys/dev-testbox": "1.0.0"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@nd/dev-cli",
+  "name": "@nmsys/dev-cli",
   "version": "1.0.0",
   "description": "An example toolchain used to build projects in this repo",
   "main": "lib/index.js",
@@ -13,12 +13,12 @@
     "clean": "rm -rf *.log"
   },
   "dependencies": {
-    "@types/node": "12.12.6",
-    "@types/mocha": "7.0.2",
     "@types/chai": "4.2.11",
+    "@types/mocha": "7.0.2",
+    "@types/node": "12.12.6",
     "@types/sinon": "9.0.0",
-    "typescript": "3.8.3",
-    "gulp": "4.0.2"
+    "gulp": "4.0.2",
+    "typescript": "3.8.3"
   },
   "devDependencies": {
     "@microsoft/node-library-build": "6.4.10",

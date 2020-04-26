@@ -11,15 +11,15 @@
     "lib": ["dom", "es5", "es2015.collection", "es2015.iterable", "es2015.promise"],
     "typeRoots": [
       "node_modules/@types",
-      "node_modules/@nd/dev-cli/node_modules/@types",
+      "node_modules/@nmsys/dev-cli/node_modules/@types",
       "../node_modules/@types",
-      "../node_modules/@nd/dev-cli/node_modules/@types",
+      "../node_modules/@nmsys/dev-cli/node_modules/@types",
       "../../node_modules/@types",
-      "../../node_modules/@nd/dev-cli/node_modules/@types",
+      "../../node_modules/@nmsys/dev-cli/node_modules/@types",
       "../../../node_modules/@types",
-      "../../../node_modules/@nd/dev-cli/node_modules/@types",
+      "../../../node_modules/@nmsys/dev-cli/node_modules/@types",
       "../../../../node_modules/@types",
-      "../../../../node_modules/@nd/dev-cli/node_modules/@types"
+      "../../../../node_modules/@nmsys/dev-cli/node_modules/@types"
     ],
     "types": ["node", "mocha", "chai", "sinon"]
   },

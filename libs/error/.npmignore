@@ -1,0 +1,8 @@
+# rush temp directory
+.rush
+# rush log files
+*.log
+# gulpfile
+gulpfile.js
+# typescript config
+tsconfig.json

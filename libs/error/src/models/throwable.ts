@@ -1,5 +1,5 @@
 import { ThrowState, ThrowStateType } from "./state";
-import { isDevelopment } from "@nd/dev-utils";
+import { isDevelopment } from "@nmsys/dev-utils";
 import DigitialConverter, { Unit } from "./utils/converter/digital";
 import { Paths } from "./utils/filesystem/path";
 

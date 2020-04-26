@@ -1,4 +1,4 @@
-import { should } from "@nd/dev-cli";
+import { should } from "@nmsys/dev-cli";
 should();
 
 describe("test", () => {

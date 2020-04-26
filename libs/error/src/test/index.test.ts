@@ -1,7 +1,7 @@
 import Throwable from "../models/throwable";
 import ThrowState, { ThrowStateType } from "../models/state";
 import ErrorManager from "../models/manager";
-import { should } from "@nd/dev-testbox";
+import { should } from "@nmsys/dev-testbox";
 
 should();
 describe("Error manager", () => {

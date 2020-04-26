@@ -1,18 +1,18 @@
 {
-  "name": "@nd/dev-graph",
-  "version": "1.0.0",
-  "description": "dependencies graph generator",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
-  "scripts": {
-    "build": "node_modules/.bin/nd-compiler",
-    "clean": "node_modules/.bin/nd-cleaner"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@nd/dev-cli": "1.0.0",
-    "@nd/dev-testbox": "1.0.0",
-    "@nd/dev-utils": "1.0.0",
-    "@nd/dev-linter": "1.0.0"
-  }
+	"name": "@nmsys/dev-graph",
+	"version": "1.0.0",
+	"description": "dependencies graph generator",
+	"main": "lib/index.js",
+	"typings": "lib/index.d.ts",
+	"scripts": {
+		"build": "node_modules/.bin/nd-compiler",
+		"clean": "node_modules/.bin/nd-cleaner"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@nmsys/dev-cli": "1.0.0",
+		"@nmsys/dev-testbox": "1.0.0",
+		"@nmsys/dev-utils": "1.0.0",
+		"@nmsys/dev-linter": "1.0.0"
+	}
 }

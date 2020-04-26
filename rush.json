@@ -330,7 +330,7 @@
    */
   "projects": [
     {
-      "packageName": "@nd/cli",
+      "packageName": "@nmsys/cli",
       "projectFolder": "apps/cli",
       "reviewCategory": "productions",
       "versionPolicyName": "Application"
@@ -338,49 +338,49 @@
 
     /*APPEND_HERE*/
     {
-      "packageName": "@nd/dev-graph",
+      "packageName": "@nmsys/dev-graph",
       "projectFolder": "dev/graph",
       "reviewCategory": "prototypes",
       "versionPolicyName": "Libraries"
     },
     {
-      "packageName": "@nd/dev-linter",
+      "packageName": "@nmsys/dev-linter",
       "projectFolder": "dev/linter",
       "reviewCategory": "prototypes",
       "versionPolicyName": "Libraries"
     },
     {
-      "packageName": "@nd/dev-utils",
+      "packageName": "@nmsys/dev-utils",
       "projectFolder": "dev/utils",
       "reviewCategory": "prototypes",
       "versionPolicyName": "Libraries"
     },
     {
-      "packageName": "@nd/dev-testbox",
+      "packageName": "@nmsys/dev-testbox",
       "projectFolder": "dev/testbox",
       "reviewCategory": "prototypes",
       "versionPolicyName": "Libraries"
     },
     {
-      "packageName": "@nd/lib-error",
+      "packageName": "@nmsys/lib-error",
       "projectFolder": "libs/error",
       "reviewCategory": "prototypes",
       "versionPolicyName": "Libraries"
     },
     {
-      "packageName": "@nd/lib-logger",
+      "packageName": "@nmsys/lib-logger",
       "projectFolder": "libs/logger",
       "reviewCategory": "prototypes",
       "versionPolicyName": "Libraries"
     },
     {
-      "packageName": "@nd/dev-generator",
+      "packageName": "@nmsys/dev-generator",
       "projectFolder": "dev/generator",
       "reviewCategory": "developments",
       "versionPolicyName": "Libraries"
     },
     {
-      "packageName": "@nd/dev-cli",
+      "packageName": "@nmsys/dev-cli",
       "projectFolder": "dev/cli",
       "reviewCategory": "developments",
       "versionPolicyName": "Libraries"

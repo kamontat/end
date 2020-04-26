@@ -3,7 +3,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
-      "name": "@nd/dev-cli",
+      "name": "@nmsys/dev-cli",
       "allowedCategories": ["developments", "libraries", "productions", "prototypes"]
     },
     {
@@ -39,19 +39,19 @@
       "allowedCategories": ["developments", "libraries"]
     },
     {
-      "name": "@nd/dev-linter",
+      "name": "@nmsys/dev-linter",
       "allowedCategories": ["prototypes"]
     },
     {
-      "name": "@nd/dev-testbox",
+      "name": "@nmsys/dev-testbox",
       "allowedCategories": ["prototypes"]
     },
     {
-      "name": "@nd/dev-utils",
+      "name": "@nmsys/dev-utils",
       "allowedCategories": ["prototypes"]
     },
     {
-      "name": "@nd/lib-controller",
+      "name": "@nmsys/lib-controller",
       "allowedCategories": ["productions"]
     },
     {

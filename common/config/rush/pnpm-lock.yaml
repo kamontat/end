@@ -4,6 +4,7 @@ dependencies:
   '@rush-temp/cli': 'file:projects/cli.tgz'
   '@rush-temp/dev-cli': 'file:projects/dev-cli.tgz'
   '@rush-temp/dev-generator': 'file:projects/dev-generator.tgz'
+  '@rush-temp/dev-graph': 'file:projects/dev-graph.tgz'
   '@rush-temp/dev-linter': 'file:projects/dev-linter.tgz_typescript@3.8.3'
   '@rush-temp/dev-testbox': 'file:projects/dev-testbox.tgz'
   '@rush-temp/dev-utils': 'file:projects/dev-utils.tgz'
@@ -8149,7 +8150,7 @@ packages:
     dev: false
     name: '@rush-temp/cli'
     resolution:
-      integrity: sha512-6QQvnRynY71GBGOwFGgRZjI+hbspgWbo9QwcHeiPL8LtvGOqv6ZuN0GuMfVTAhLPkNv/wWVIrotFusIuUl0uOQ==
+      integrity: sha512-y+tRAw7wve1/GlsDYf60fzqtUf2PZmu6cRi3fyvlndG/7y9vBORd62Sp62hiNbPuQhFT+LJlIVBH8HEUmG2X/A==
       tarball: 'file:projects/cli.tgz'
     version: 0.0.0
   'file:projects/dev-cli.tgz':
@@ -8175,8 +8176,15 @@ packages:
     dev: false
     name: '@rush-temp/dev-generator'
     resolution:
-      integrity: sha512-gFXM6gTJPxbtp4z4IKHSbrZmyEJXyoPS1d/dkpTji/IKZs12a1vlKm26B3TQItppfg78H+SD89nqWYMz2uCV/g==
+      integrity: sha512-153TlYYRQKDlrppzVq7ZO9eYoDZRNMA1W5fVCyATJXWlDlezIvJL3nAVyxRK8BnwxRG/GaEVv10B5Qe+xG0quQ==
       tarball: 'file:projects/dev-generator.tgz'
+    version: 0.0.0
+  'file:projects/dev-graph.tgz':
+    dev: false
+    name: '@rush-temp/dev-graph'
+    resolution:
+      integrity: sha512-XbbhcNih5K5DabK1DKNZ4rURmpb1llSZxDYtfs9EcbCGCWG7/J9p6QkGWcfMpZlcZouqcnmv6/QJKJMT90zg9g==
+      tarball: 'file:projects/dev-graph.tgz'
     version: 0.0.0
   'file:projects/dev-linter.tgz_typescript@3.8.3':
     dependencies:
@@ -8192,7 +8200,7 @@ packages:
     peerDependencies:
       typescript: '*'
     resolution:
-      integrity: sha512-G5NeUD+/8aPlHH+AIm7uodOuGMqyPTQuyY1ocb1UBw+A2GTgMvohk3lZ3vW714uDeQAenwzTsOiAAJEulrwE3A==
+      integrity: sha512-/QOmdHf8OFIE5P53Htzn5q6Zj5JnLKm2iRINAemDqYsUPDXmuS9NzFoObq0inCj47n8dgAjXu6TY5Mrn3WdR5Q==
       tarball: 'file:projects/dev-linter.tgz'
     version: 0.0.0
   'file:projects/dev-testbox.tgz':
@@ -8206,21 +8214,21 @@ packages:
     dev: false
     name: '@rush-temp/dev-testbox'
     resolution:
-      integrity: sha512-oYthGmb2J9Hqw8LWn8pmw7ZSq85bAegFMg6Sp/wHXnMQQLBmnsrUKMAdoP3WD/NIKcmTAp3hBhZXylZonqX9KQ==
+      integrity: sha512-gdp201FQ/zwoPqbc0GSCVacBS+8uEKUXdxSNqXkNFnZUrPrOv050/5n2WHkBfG2nOl4Shz2moDsPsBzr5Cgqjg==
       tarball: 'file:projects/dev-testbox.tgz'
     version: 0.0.0
   'file:projects/dev-utils.tgz':
     dev: false
     name: '@rush-temp/dev-utils'
     resolution:
-      integrity: sha512-72fS/snoIZzqNo7hySznvncIvis81r0XL5uqacEdtmlEKoyEFXvmd1N/UOV0/lAwZHOoPjN+aiJaQ82wNM3H1w==
+      integrity: sha512-eA1vuo8SHNUE/wfsBh8HnKS5Z3MpvVEzyo/0egJ/Z5Zz1iaZ7EZVXCSvpTmktx/FYqrIUSgZ+qfvnkvLsMrvfA==
       tarball: 'file:projects/dev-utils.tgz'
     version: 0.0.0
   'file:projects/lib-error.tgz':
     dev: false
     name: '@rush-temp/lib-error'
     resolution:
-      integrity: sha512-OReZHVFXSpk8gL8gtEgXVM57k6JTd43LeQIVQhQWrdm4fTwFZeV1knnkLyDi5wwKdRY+qKEvxsBIE6vfy67ndg==
+      integrity: sha512-C8wE0Znyj1FKVKFa/ggQUoYXQiiIdmPNLflbsNpdENjCSgFT1FZjPsw2iODuVvm+xLC1SBbIOoh+Ag+Rsi0vRA==
       tarball: 'file:projects/lib-error.tgz'
     version: 0.0.0
   'file:projects/lib-logger.tgz':
@@ -8229,7 +8237,7 @@ packages:
     dev: false
     name: '@rush-temp/lib-logger'
     resolution:
-      integrity: sha512-pbqKzK43njE02o5l2YvAa+KMFgLItsFEA6e1DpmkEM2S6rjoEoi7vpXTs/4RzMNa2oWoSXT5qdSDfP6KUM8Y7A==
+      integrity: sha512-ScORtQfxpb+IlTjc4D2YHFi3q1/N3lnjUESPvKDP1yI7VGZLQGU+gpDYDjLIhq4POWAKE9l/n/yuB+p7xQOpJw==
       tarball: 'file:projects/lib-logger.tgz'
     version: 0.0.0
 registry: ''
@@ -8239,6 +8247,7 @@ specifiers:
   '@rush-temp/cli': 'file:./projects/cli.tgz'
   '@rush-temp/dev-cli': 'file:./projects/dev-cli.tgz'
   '@rush-temp/dev-generator': 'file:./projects/dev-generator.tgz'
+  '@rush-temp/dev-graph': 'file:./projects/dev-graph.tgz'
   '@rush-temp/dev-linter': 'file:./projects/dev-linter.tgz'
   '@rush-temp/dev-testbox': 'file:./projects/dev-testbox.tgz'
   '@rush-temp/dev-utils': 'file:./projects/dev-utils.tgz'
