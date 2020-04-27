@@ -13,6 +13,8 @@
   },
   "devDependencies": {
     "@nmsys/dev-cli": "1.0.0",
-    "@nmsys/dev-testbox": "1.0.0"
+    "@nmsys/dev-linter": "1.0.0",
+    "@nmsys/dev-testbox": "1.0.0",
+    "@nmsys/dev-utils": "1.0.0"
   }
 }
