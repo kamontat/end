@@ -3,128 +3,128 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
-      "name": "@nmsys/dev-cli",
-      "allowedCategories": ["developments", "libraries", "productions", "prototypes"]
-    },
-    {
-      "name": "@types/node",
-      "allowedCategories": ["developments"]
-    },
-    {
-      "name": "colors",
-      "allowedCategories": ["developments"]
-    },
-    {
-      "name": "my-controls",
-      "allowedCategories": ["productions"]
-    },
-    {
-      "name": "rimraf",
-      "allowedCategories": ["developments"]
-    },
-    {
-      "name": "typescript",
-      "allowedCategories": ["developments", "libraries", "productions"]
-    },
-    {
-      "name": "whatwg-fetch",
-      "allowedCategories": ["productions"]
-    },
-    {
       "name": "@microsoft/node-library-build",
-      "allowedCategories": ["developments", "libraries"]
+      "allowedCategories": [ "developments", "libraries" ]
     },
     {
       "name": "@microsoft/rush-stack-compiler-3.7",
-      "allowedCategories": ["developments", "libraries"]
+      "allowedCategories": [ "developments", "libraries" ]
+    },
+    {
+      "name": "@nmsys/dev-cli",
+      "allowedCategories": [ "developments", "libraries", "productions", "prototypes" ]
     },
     {
       "name": "@nmsys/dev-linter",
-      "allowedCategories": ["prototypes"]
+      "allowedCategories": [ "prototypes" ]
     },
     {
       "name": "@nmsys/dev-testbox",
-      "allowedCategories": ["prototypes"]
+      "allowedCategories": [ "productions", "prototypes" ]
     },
     {
       "name": "@nmsys/dev-utils",
-      "allowedCategories": ["prototypes"]
+      "allowedCategories": [ "prototypes" ]
     },
     {
       "name": "@nmsys/lib-controller",
-      "allowedCategories": ["productions"]
+      "allowedCategories": [ "productions" ]
     },
     {
       "name": "@rushstack/eslint-config",
-      "allowedCategories": ["developments", "prototypes"]
+      "allowedCategories": [ "developments", "prototypes" ]
+    },
+    {
+      "name": "@types/node",
+      "allowedCategories": [ "developments" ]
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "allowedCategories": ["prototypes"]
+      "allowedCategories": [ "prototypes" ]
     },
     {
       "name": "@typescript-eslint/parser",
-      "allowedCategories": ["prototypes"]
+      "allowedCategories": [ "prototypes" ]
     },
     {
       "name": "chai",
-      "allowedCategories": ["developments", "prototypes"]
+      "allowedCategories": [ "developments", "prototypes" ]
+    },
+    {
+      "name": "colors",
+      "allowedCategories": [ "developments" ]
     },
     {
       "name": "debug",
-      "allowedCategories": ["prototypes"]
+      "allowedCategories": [ "prototypes" ]
     },
     {
       "name": "eslint",
-      "allowedCategories": ["developments", "prototypes"]
+      "allowedCategories": [ "developments", "prototypes" ]
     },
     {
       "name": "eslint-config-prettier",
-      "allowedCategories": ["developments", "prototypes"]
+      "allowedCategories": [ "developments", "prototypes" ]
     },
     {
       "name": "eslint-plugin-prettier",
-      "allowedCategories": ["developments", "prototypes"]
+      "allowedCategories": [ "developments", "prototypes" ]
     },
     {
       "name": "gulp",
-      "allowedCategories": ["developments", "libraries"]
+      "allowedCategories": [ "developments", "libraries" ]
     },
     {
       "name": "jest",
-      "allowedCategories": ["developments", "prototypes"]
+      "allowedCategories": [ "developments", "prototypes" ]
     },
     {
       "name": "mocha",
-      "allowedCategories": ["developments", "libraries"]
+      "allowedCategories": [ "developments", "libraries" ]
+    },
+    {
+      "name": "my-controls",
+      "allowedCategories": [ "productions" ]
     },
     {
       "name": "plop",
-      "allowedCategories": ["developments", "prototypes"]
+      "allowedCategories": [ "developments", "prototypes" ]
     },
     {
       "name": "prettier",
-      "allowedCategories": ["prototypes"]
+      "allowedCategories": [ "prototypes" ]
+    },
+    {
+      "name": "rimraf",
+      "allowedCategories": [ "developments" ]
     },
     {
       "name": "sinon",
-      "allowedCategories": ["developments", "prototypes"]
+      "allowedCategories": [ "developments", "prototypes" ]
     },
     {
       "name": "ts-loader",
-      "allowedCategories": ["developments"]
+      "allowedCategories": [ "developments" ]
+    },
+    {
+      "name": "typescript",
+      "allowedCategories": [ "developments", "libraries", "productions" ]
     },
     {
       "name": "webpack",
-      "allowedCategories": ["developments"]
+      "allowedCategories": [ "developments" ]
     },
     {
       "name": "webpack-cli",
-      "allowedCategories": ["developments"]
+      "allowedCategories": [ "developments" ]
+    },
+    {
+      "name": "whatwg-fetch",
+      "allowedCategories": [ "productions" ]
     },
     {
       "name": "winston",
-      "allowedCategories": ["prototypes"]
+      "allowedCategories": [ "prototypes" ]
     }
   ]
 }

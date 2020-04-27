@@ -5,13 +5,14 @@
 	"main": "lib/index.js",
 	"typings": "lib/index.d.ts",
 	"scripts": {
-		"build": "node_modules/.bin/nd-compiler",
-		"clean": "node_modules/.bin/nd-cleaner"
+		"build": "node_modules/.bin/nmsys-compiler",
+		"clean": "node_modules/.bin/nmsys-cleaner"
 	},
 	"dependencies": {
 		"whatwg-fetch": "3.0.0"
 	},
 	"devDependencies": {
-		"@nmsys/dev-cli": "1.0.0"
+    "@nmsys/dev-cli": "1.0.0",
+    "@nmsys/dev-testbox": "1.0.0"
 	}
 }

@@ -5,8 +5,8 @@
 	"main": "lib/index.js",
 	"typings": "lib/index.d.ts",
 	"scripts": {
-		"build": "node_modules/.bin/nd-compiler",
-		"clean": "node_modules/.bin/nd-cleaner",
+		"build": "node_modules/.bin/nmsys-compiler",
+		"clean": "node_modules/.bin/nmsys-cleaner",
 		"gen": "plop --plopfile lib/plopfile.js"
 	},
 	"dependencies": {

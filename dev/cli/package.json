@@ -5,8 +5,9 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "bin": {
-    "nd-compiler": "bin/nd-compiler.js",
-    "nd-cleaner": "bin/nd-cleaner.js"
+    "nmsys-compiler": "bin/nmsys-compiler.js",
+    "nmsys-cleaner": "bin/nmsys-cleaner.js",
+    "nmsys-runner": "bin/nmsys-runner.js"
   },
   "scripts": {
     "build": "gulp",

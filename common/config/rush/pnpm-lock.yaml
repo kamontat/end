@@ -11,6 +11,7 @@ dependencies:
   '@rush-temp/lib-error': 'file:projects/lib-error.tgz'
   '@rush-temp/lib-logger': 'file:projects/lib-logger.tgz'
   '@types/chai': 4.2.11
+  '@types/graphviz': 0.0.31
   '@types/mocha': 7.0.2
   '@types/node': 12.12.6
   '@types/sinon': 9.0.0
@@ -20,6 +21,7 @@ dependencies:
   eslint: 6.8.0
   eslint-config-prettier: 6.11.0_eslint@6.8.0
   eslint-plugin-prettier: 3.1.3_eslint@6.8.0+prettier@2.0.5
+  graphviz: 0.0.9
   gulp: 4.0.2
   plop: 2.6.0
   prettier: 2.0.5
@@ -326,6 +328,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-9du/HCA71EBz7syHRnM4Q/u4Fbx3SyN/Uu+4Of9lyPX4A6Xi+A8VMxvx8j5/CMTfrae2Zwdwg0fAaKvKXfRbAw==
+  /@types/graphviz/0.0.31:
+    dev: false
+    resolution:
+      integrity: sha512-dmIYFb8OSXU/7kRuGcIuUE1InHhNF8JqhNLDXtn5XnAfBfRatIKAmlKZtBHxulcuYZb5F26sgoPtLK1qmwzz+A==
   /@types/gulp/4.0.6:
     dependencies:
       '@types/undertaker': 1.2.2
@@ -3232,6 +3238,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
+  /graphviz/0.0.9:
+    dependencies:
+      temp: 0.4.0
+    dev: false
+    engines:
+      node: '>=0.6.8'
+    resolution:
+      integrity: sha512-SmoY2pOtcikmMCqCSy2NO1YsRfu9OO0wpTlOYW++giGjfX1a6gax/m1Fo8IdUd0/3H15cTOfR1SMKwohj4LKsg==
   /growl/1.10.5:
     dev: false
     engines:
@@ -3601,7 +3615,7 @@ packages:
       figures: 2.0.0
       lodash: 4.17.15
       mute-stream: 0.0.7
-      run-async: 2.4.0
+      run-async: 2.4.1
       rxjs: 6.5.5
       string-width: 2.1.1
       strip-ansi: 5.2.0
@@ -3621,7 +3635,7 @@ packages:
       figures: 3.2.0
       lodash: 4.17.15
       mute-stream: 0.0.8
-      run-async: 2.4.0
+      run-async: 2.4.1
       rxjs: 6.5.5
       string-width: 4.2.0
       strip-ansi: 6.0.0
@@ -3945,10 +3959,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-IHurkWOEmcB7Kt8kCkGochADRXU=
-  /is-promise/2.2.2:
-    dev: false
-    resolution:
-      integrity: sha512-+lP4/6lKUBfQjZ2pdxThZvLUAafmZb8OAxFb8XXtiQmS35INgr85hdOGoEs124ez1FCnZJt6jau/T+alh58QFQ==
   /is-regex/1.0.5:
     dependencies:
       has: 1.0.3
@@ -6722,14 +6732,12 @@ packages:
       node: 0.12.* || 4.* || 6.* || >= 7.*
     resolution:
       integrity: sha512-OfWGQTb9vnwRjwtA2QwpG2ICclHC3pgXZO5xt8H2EfgDquO0qVdSb5T88L4qJVAEugbS56pAuV4XZM58UX8ulw==
-  /run-async/2.4.0:
-    dependencies:
-      is-promise: 2.2.2
+  /run-async/2.4.1:
     dev: false
     engines:
       node: '>=0.12.0'
     resolution:
-      integrity: sha512-xJTbh/d7Lm7SBhc1tNvTpeCHaEzoyxPrqNlvSdMfBTYwaY++UJFyXUOxAtsRUXjlqOfj8luNaR9vjCh4KeV+pg==
+      integrity: sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ==
   /run-parallel/1.1.9:
     dev: false
     resolution:
@@ -7307,6 +7315,12 @@ packages:
       node: '>=6.0.0'
     resolution:
       integrity: sha512-wmEc8m4fjnob4gt5riFRtTu/6+4rSe12TpAELNSqHMfF3IqnA+CH37USM6/YR3qRZv7e56kAEAtd6nKZaxe0Ug==
+  /temp/0.4.0:
+    dev: false
+    engines:
+      '0': node >=0.4.0
+    resolution:
+      integrity: sha1-ZxrWPVe+D+nXKUZks/xABjZnimA=
   /ternary-stream/2.1.1:
     dependencies:
       duplexify: 3.7.1
@@ -8180,10 +8194,13 @@ packages:
       tarball: 'file:projects/dev-generator.tgz'
     version: 0.0.0
   'file:projects/dev-graph.tgz':
+    dependencies:
+      '@types/graphviz': 0.0.31
+      graphviz: 0.0.9
     dev: false
     name: '@rush-temp/dev-graph'
     resolution:
-      integrity: sha512-XbbhcNih5K5DabK1DKNZ4rURmpb1llSZxDYtfs9EcbCGCWG7/J9p6QkGWcfMpZlcZouqcnmv6/QJKJMT90zg9g==
+      integrity: sha512-J31G7do3/ue0eRgXvP1JYFxV+CM9trv1IqCppNO1sYs9dZlQET0iIr4V4f78gYXSHZg07cN9RBmgafLYqG3Wzg==
       tarball: 'file:projects/dev-graph.tgz'
     version: 0.0.0
   'file:projects/dev-linter.tgz_typescript@3.8.3':
@@ -8237,7 +8254,7 @@ packages:
     dev: false
     name: '@rush-temp/lib-logger'
     resolution:
-      integrity: sha512-ScORtQfxpb+IlTjc4D2YHFi3q1/N3lnjUESPvKDP1yI7VGZLQGU+gpDYDjLIhq4POWAKE9l/n/yuB+p7xQOpJw==
+      integrity: sha512-xXq6VSZC5NbZjXlkJpFs4v0QKiwOryFt1klMwaVC7KKHf9y9NDRdFJax0Lu+f4gtEScZo/NvpMbZBC+YIqsoeQ==
       tarball: 'file:projects/lib-logger.tgz'
     version: 0.0.0
 registry: ''
@@ -8254,6 +8271,7 @@ specifiers:
   '@rush-temp/lib-error': 'file:./projects/lib-error.tgz'
   '@rush-temp/lib-logger': 'file:./projects/lib-logger.tgz'
   '@types/chai': 4.2.11
+  '@types/graphviz': 0.0.31
   '@types/mocha': 7.0.2
   '@types/node': 12.12.6
   '@types/sinon': 9.0.0
@@ -8263,6 +8281,7 @@ specifiers:
   eslint: 6.8.0
   eslint-config-prettier: 6.11.0
   eslint-plugin-prettier: 3.1.3
+  graphviz: 0.0.9
   gulp: 4.0.2
   plop: 2.6.0
   prettier: 2.0.5

@@ -1,17 +1,20 @@
 {
-	"name": "@nmsys/dev-graph",
-	"version": "1.0.0",
-	"description": "dependencies graph generator",
-	"main": "lib/index.js",
-	"typings": "lib/index.d.ts",
-	"scripts": {
-		"build": "node_modules/.bin/nd-compiler",
-		"clean": "node_modules/.bin/nd-cleaner"
-	},
-	"devDependencies": {
-		"@nmsys/dev-cli": "1.0.0",
-		"@nmsys/dev-linter": "1.0.0",
-		"@nmsys/dev-testbox": "1.0.0",
-		"@nmsys/dev-utils": "1.0.0"
-	}
+  "name": "@nmsys/dev-graph",
+  "version": "1.0.0",
+  "description": "dependencies graph generator",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build": "node_modules/.bin/nmsys-compiler",
+    "runner": "node_modules/.bin/nmsys-runner",
+    "clean": "node_modules/.bin/nmsys-cleaner"
+  },
+  "dependencies": {
+    "graphviz": "0.0.9",
+    "@types/graphviz": "0.0.31"
+  },
+  "devDependencies": {
+    "@nmsys/dev-cli": "1.0.0",
+    "@nmsys/dev-linter": "1.0.0"
+  }
 }
