@@ -13,6 +13,12 @@
   "commands": [
     {
       "commandKind": "global",
+      "name": "graph",
+      "summary": "create new graph pdf and png in graph modules",
+      "shellCommand": "make graph"
+    },
+    {
+      "commandKind": "global",
       "name": "gen",
       "summary": "use plopjs to generate new modules",
       "shellCommand": "make gen"
