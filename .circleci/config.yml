@@ -32,9 +32,19 @@ jobs:
       - run:
           name: Checking for missing change logs...
           command: node common/scripts/install-run-rush.js change -v
+      - restore_cache:
+          keys:
+            - v1-rushjs-{{ checksum "common/config/rush/pnpm-lock.yaml" }}
+            - v1-rushjs-
       - run:
           name: Installing...
           command: node common/scripts/install-run-rush.js install
+      - save_cache:
+          paths:
+            - common/temp/node_modules
+            - common/temp/pnpm-store
+            - /home/circleci/.rush
+          key: v1-rushjs-{{ checksum "common/config/rush/pnpm-lock.yaml" }}
       - run:
           name: Building...
           command: node common/scripts/install-run-rush.js rebuild --verbose
