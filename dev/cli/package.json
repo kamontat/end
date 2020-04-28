@@ -1,6 +1,6 @@
 {
   "name": "@nmsys/dev-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An example toolchain used to build projects in this repo",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",

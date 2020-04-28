@@ -1,16 +1,9 @@
-# Change Log - @nmsys/dev-graph
+# Change Log - @nmsys/lib-logger
 
 This log was last generated on Tue, 28 Apr 2020 12:16:44 GMT and should not be manually modified.
 
 ## 1.0.1
 Tue, 28 Apr 2020 12:16:44 GMT
-
-### Patches
-
-- update new styles and add new dependencies
-
-## 1.0.0
-Sun, 26 Apr 2020 15:48:09 GMT
 
 *Initial release*
 

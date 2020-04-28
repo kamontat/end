@@ -1,6 +1,6 @@
 {
 	"name": "@nmsys/cli",
-	"version": "1.0.1-0",
+	"version": "1.0.1",
 	"description": "An example application that consumes the my-controls library",
 	"main": "lib/index.js",
 	"typings": "lib/index.d.ts",
@@ -12,7 +12,7 @@
 		"whatwg-fetch": "3.0.0"
 	},
 	"devDependencies": {
-    "@nmsys/dev-cli": "1.0.0",
-    "@nmsys/dev-testbox": "1.0.0"
+		"@nmsys/dev-cli": "1.0.1",
+		"@nmsys/dev-testbox": "1.0.1"
 	}
 }

@@ -1,6 +1,6 @@
 {
   "name": "@nmsys/dev-graph",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "dependencies graph generator",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -11,11 +11,11 @@
     "clean": "node_modules/.bin/nmsys-cleaner"
   },
   "dependencies": {
-    "graphviz": "0.0.9",
-    "@types/graphviz": "0.0.31"
+    "@types/graphviz": "0.0.31",
+    "graphviz": "0.0.9"
   },
   "devDependencies": {
-    "@nmsys/dev-cli": "1.0.0",
-    "@nmsys/dev-linter": "1.0.0"
+    "@nmsys/dev-cli": "1.0.1",
+    "@nmsys/dev-linter": "1.0.1"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@nmsys/lib-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "log management",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -12,9 +12,9 @@
     "winston": "3.2.1"
   },
   "devDependencies": {
-    "@nmsys/dev-cli": "1.0.0",
-    "@nmsys/dev-linter": "1.0.0",
-    "@nmsys/dev-testbox": "1.0.0",
-    "@nmsys/dev-utils": "1.0.0"
+    "@nmsys/dev-cli": "1.0.1",
+    "@nmsys/dev-linter": "1.0.1",
+    "@nmsys/dev-testbox": "1.0.1",
+    "@nmsys/dev-utils": "1.0.1"
   }
 }

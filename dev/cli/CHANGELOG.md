@@ -1,4 +1,4 @@
-# Change Log - @nmsys/dev-graph
+# Change Log - @nmsys/dev-cli
 
 This log was last generated on Tue, 28 Apr 2020 12:16:44 GMT and should not be manually modified.
 
@@ -7,10 +7,5 @@ Tue, 28 Apr 2020 12:16:44 GMT
 
 ### Patches
 
-- update new styles and add new dependencies
-
-## 1.0.0
-Sun, 26 Apr 2020 15:48:09 GMT
-
-*Initial release*
+- downgraph typescript from 3.8 to 3.7
 

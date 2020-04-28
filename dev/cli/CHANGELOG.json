@@ -1,0 +1,17 @@
+{
+  "name": "@nmsys/dev-cli",
+  "entries": [
+    {
+      "version": "1.0.1",
+      "tag": "@nmsys/dev-cli_v1.0.1",
+      "date": "Tue, 28 Apr 2020 12:16:44 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "downgraph typescript from 3.8 to 3.7"
+          }
+        ]
+      }
+    }
+  ]
+}

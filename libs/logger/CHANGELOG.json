@@ -1,31 +1,26 @@
 {
-  "name": "@nmsys/dev-graph",
+  "name": "@nmsys/lib-logger",
   "entries": [
     {
       "version": "1.0.1",
-      "tag": "@nmsys/dev-graph_v1.0.1",
+      "tag": "@nmsys/lib-logger_v1.0.1",
       "date": "Tue, 28 Apr 2020 12:16:44 GMT",
       "comments": {
-        "patch": [
-          {
-            "comment": "update new styles and add new dependencies"
-          }
-        ],
         "dependency": [
           {
             "comment": "Updating dependency \"@nmsys/dev-cli\" from `1.0.0` to `1.0.1`"
           },
           {
             "comment": "Updating dependency \"@nmsys/dev-linter\" from `1.0.0` to `1.0.1`"
+          },
+          {
+            "comment": "Updating dependency \"@nmsys/dev-testbox\" from `1.0.0` to `1.0.1`"
+          },
+          {
+            "comment": "Updating dependency \"@nmsys/dev-utils\" from `1.0.0` to `1.0.1`"
           }
         ]
       }
-    },
-    {
-      "version": "1.0.0",
-      "tag": "@nmsys/dev-graph_v1.0.0",
-      "date": "Sun, 26 Apr 2020 15:48:09 GMT",
-      "comments": {}
     }
   ]
 }

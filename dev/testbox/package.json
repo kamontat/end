@@ -1,6 +1,6 @@
 {
 	"name": "@nmsys/dev-testbox",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "testing in a box",
 	"main": "lib/index.js",
 	"typings": "lib/index.d.ts",
@@ -17,6 +17,6 @@
 		"sinon": "9.0.2"
 	},
 	"devDependencies": {
-		"@nmsys/dev-cli": "1.0.0"
+		"@nmsys/dev-cli": "1.0.1"
 	}
 }

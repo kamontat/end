@@ -1,6 +1,6 @@
 {
 	"name": "@nmsys/dev-linter",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "eslint configuration and prettier",
 	"main": "lib/index.js",
 	"typings": "lib/index.d.ts",
@@ -9,7 +9,7 @@
 		"clean": "node_modules/.bin/nmsys-cleaner"
 	},
 	"devDependencies": {
-		"@nmsys/dev-cli": "1.0.0",
+		"@nmsys/dev-cli": "1.0.1",
 		"@typescript-eslint/eslint-plugin": "2.29.0",
 		"@typescript-eslint/parser": "2.29.0",
 		"eslint": "6.8.0",

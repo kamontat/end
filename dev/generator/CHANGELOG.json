@@ -2,6 +2,18 @@
   "name": "@nmsys/dev-generator",
   "entries": [
     {
+      "version": "1.0.2",
+      "tag": "@nmsys/dev-generator_v1.0.2",
+      "date": "Tue, 28 Apr 2020 12:16:44 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@nmsys/dev-cli\" from `1.0.0` to `1.0.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.1",
       "tag": "@nmsys/dev-generator_v1.0.1",
       "date": "Sun, 26 Apr 2020 17:13:37 GMT",

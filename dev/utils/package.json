@@ -1,6 +1,6 @@
 {
   "name": "@nmsys/dev-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "utils method for development",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -9,7 +9,7 @@
     "clean": "node_modules/.bin/nmsys-cleaner"
   },
   "devDependencies": {
-    "@nmsys/dev-cli": "1.0.0",
-    "@nmsys/dev-testbox": "1.0.0"
+    "@nmsys/dev-cli": "1.0.1",
+    "@nmsys/dev-testbox": "1.0.1"
   }
 }
