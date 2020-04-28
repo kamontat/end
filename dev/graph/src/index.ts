@@ -5,30 +5,35 @@ import { resolve } from "path";
 const graph = new Graph("Dependencies");
 
 // dev-cli completed
-graph.newNode(deps.devCli).dependsOn(deps.typescript, deps.gulp, deps.rimraf);
+graph
+  .newNode(deps.devCli)
+  .dependsOn(deps.typescript, deps.microsoftNodeBuild, deps.microsoftRushCompiler, deps.gulp, deps.rimraf);
 
 // dev-graph completed
-graph.newNode(deps.devGraph).dependsOn(deps.graphviz, deps.devCli, deps.devLinter);
+graph.newNode(deps.devGraph).withDevCli().withLint().dependsOn(deps.graphviz);
 
 // dev-generator completed
-graph.newNode(deps.devGenerator).dependsOn(deps.plop, deps.devCli);
+graph.newNode(deps.devGenerator).withDevCli().dependsOn(deps.plop);
 
-// dev-linter
+// dev-linter completed
+graph.newNode(deps.devLinter).withDevCli().dependsOn(deps.eslint, deps.prettier);
 
-// dev-testbox
+// dev-testbox completed
+graph.newNode(deps.devTestbox).withDevCli().dependsOn(deps.chai, deps.sinon);
 
-// dev-utils
+// dev-utils completed
+graph.newNode(deps.devUtils).withDevCli().withTest();
 
-// lib-logger
-graph.newNode(deps.libLogger).standardNode();
+// lib-error completed
+graph.newNode(deps.libError).withDevCli().withLint().withTest().withUtils();
 
-// lib-error
-graph.newNode(deps.libError).standardNode();
+// lib-logger completed
+graph.newNode(deps.libLogger).withDevCli().withLint().withTest().withUtils().dependsOn(deps.winston);
 
 // cli
-graph.newNode(deps.cli).standardNode();
+// graph.newNode(deps.cli).standardNode();
 
-console.log(graph.toString());
+// console.log(graph.toString());
 
 const path = resolve(".");
 graph.toPNG(path);

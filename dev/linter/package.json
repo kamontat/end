@@ -10,7 +10,6 @@
 	},
 	"devDependencies": {
 		"@nmsys/dev-cli": "1.0.0",
-		"@nmsys/dev-testbox": "1.0.0",
 		"@typescript-eslint/eslint-plugin": "2.29.0",
 		"@typescript-eslint/parser": "2.29.0",
 		"eslint": "6.8.0",

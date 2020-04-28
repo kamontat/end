@@ -17,7 +17,7 @@ export class Graph {
     this.graph.set("size", "10");
 
     this.graph.setNodeAttribut("fontsize", "12");
-    this.graph.setNodeAttribut("shape", "box");
+    this.graph.setNodeAttribut("shape", "component");
     this.graph.setNodeAttribut("margin", "0.22,0.22");
   }
 
