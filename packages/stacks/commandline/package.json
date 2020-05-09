@@ -8,7 +8,8 @@
   "bin": {
     "nmsys-compiler-tsc": "bin/nmsys-compiler-tsc.js",
     "nmsys-compiler-webpack": "bin/nmsys-compiler-webpack.js",
-    "nmsys-cleaner": "bin/nmsys-cleaner.js"
+    "nmsys-cleaner": "bin/nmsys-cleaner.js",
+    "nmsys-tester": "bin/nmsys-tester.js"
   },
   "scripts": {
     "build": "inmsys-tsc"

@@ -1,9 +1,9 @@
 import { resolve } from "path";
 
-import pjson from "../../package.json";
 import { CommandHelper } from "./CommandHelper";
 import { Execution } from "./Execution";
 
+const pjson = require("../../package.json");
 const name = pjson.name.split("/");
 
 type BuilderOption = { helper: CommandHelper };

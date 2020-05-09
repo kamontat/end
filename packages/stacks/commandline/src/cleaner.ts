@@ -6,12 +6,12 @@ type Option = { all: boolean };
 
 const cli = new Command(process.cwd(), new Method<Option>());
 cli.build(({ helper }) => {
-  return async (opt: Option): Promise<void> => {
+  return async (opt?: Option): Promise<void> => {
     const logs = helper.parentPath("**/*.log");
     const lib = helper.parentPath("lib");
 
     const arr = [logs, lib];
-    if (opt.all) {
+    if (opt?.all ?? false) {
       const nodeModules = helper.parentPath("node_modules");
       const lock = helper.parentPath("yarn.lock");
       arr.push(nodeModules, lock);

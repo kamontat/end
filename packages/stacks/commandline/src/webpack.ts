@@ -6,4 +6,4 @@ cli.build(({ helper }) => {
   return [helper.rootNodeModulesCommand("webpack"), "--config", helper.parentPath("webpack.config.js")];
 });
 
-cli.start();
+cli.start(process.argv.slice(2));

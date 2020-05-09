@@ -3,7 +3,12 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "test": "lerna run test --stream",
+    "test:cov": "lerna run test --stream -- --coverage true",
+    "test:silent": "lerna run test",
+    "clean": "lerna run clean",
+    "clean:info": "rm -rf ./**/*.buildinfo ./**/*.tsbuildinfo"
   },
   "devDependencies": {
     "@types/jest": "25.2.1",

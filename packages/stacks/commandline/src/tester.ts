@@ -6,4 +6,4 @@ cli.build(({ helper }) => {
   return [helper.rootNodeModulesCommand("jest")];
 });
 
-cli.start();
+cli.start(process.argv.slice(2));

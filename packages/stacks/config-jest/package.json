@@ -1,7 +1,7 @@
 {
-  "name": "@nmsys/stack-config",
+  "name": "@nmsys/stack-config-jest",
   "version": "0.1.0",
-  "description": "configuration interface",
+  "description": "configuration for jest",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "publishConfig": {
@@ -11,6 +11,7 @@
     "build": "inmsys-tsc"
   },
   "devDependencies": {
-    "@nmsys/internal-compiler": "0.1.0"
+    "@nmsys/internal-compiler": "0.1.0",
+    "@nmsys/stack-config": "0.1.0"
   }
 }

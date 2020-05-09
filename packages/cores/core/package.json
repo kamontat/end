@@ -9,12 +9,14 @@
   },
   "scripts": {
     "build": "nmsys-compiler-webpack",
-    "clean": "nmsys-cleaner"
+    "clean": "nmsys-cleaner",
+    "test": "nmsys-tester"
   },
   "devDependencies": {
     "@nmsys/stack-config-webpack": "0.1.0",
     "@nmsys/stack-config-eslint": "0.1.0",
     "@nmsys/stack-config-prettier": "0.1.0",
+    "@nmsys/stack-config-jest": "0.1.0",
     "@nmsys/stack-commandline": "0.1.0"
   }
 }

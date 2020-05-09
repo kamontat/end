@@ -8,4 +8,6 @@ const rootProject = resolve(parentProject, "..", "..", "..");
 const tscProject = resolve(parentProject, "node_modules", "@nmsys", "internal-compiler");
 const project = resolve(tscProject, "includes");
 
-childProcess.execSync(`${rootProject}/node_modules/.bin/tsc --project ${project}`, { stdio: "inherit" });
+childProcess.execSync(`${rootProject}/node_modules/.bin/tsc --project ${project}`, {
+  stdio: "inherit",
+});
