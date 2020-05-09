@@ -1,0 +1,9 @@
+{
+  "extends": "../node_modules/@nmsys/internal-compiler/includes/tsconfig.json",
+  "include": ["../../../../src"],
+  "compilerOptions": {
+    "outDir": "../../../../lib",
+    "rootDir": "../../../../src",
+    "tsBuildInfoFile": "../../../../tscompiler.buildinfo"
+  }
+}

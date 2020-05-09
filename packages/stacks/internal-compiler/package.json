@@ -1,0 +1,14 @@
+{
+  "name": "@nmsys/internal-compiler",
+  "version": "0.1.0",
+  "description": "internal compiler for stack packages",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "inmsys-tsc": "bin/compiler.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}

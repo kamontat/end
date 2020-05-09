@@ -1,0 +1,17 @@
+{
+  "name": "@nmsys/stack-config-prettier",
+  "version": "0.1.0",
+  "description": "configuration for prettier",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "inmsys-tsc"
+  },
+  "devDependencies": {
+    "@nmsys/internal-compiler": "0.1.0",
+    "@nmsys/stack-config": "0.1.0"
+  }
+}

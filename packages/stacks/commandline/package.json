@@ -1,0 +1,20 @@
+{
+  "name": "@nmsys/stack-commandline",
+  "version": "0.1.0",
+  "description": "internal compiler configuration and cli",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "nmsys-compiler-tsc": "bin/nmsys-compiler-tsc.js",
+    "nmsys-compiler-webpack": "bin/nmsys-compiler-webpack.js",
+    "nmsys-cleaner": "bin/nmsys-cleaner.js"
+  },
+  "scripts": {
+    "build": "inmsys-tsc"
+  },
+  "devDependencies": {
+    "@nmsys/internal-compiler": "0.1.0",
+    "del": "5.1.0"
+  }
+}

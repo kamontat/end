@@ -1,0 +1,16 @@
+{
+  "name": "@nmsys/internal-generator",
+  "version": "0.1.0",
+  "bin": {
+    "inmsys-generator": "bin/generator.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "inmsys-tsc"
+  },
+  "devDependencies": {
+    "@nmsys/internal-compiler": "0.1.0"
+  }
+}
