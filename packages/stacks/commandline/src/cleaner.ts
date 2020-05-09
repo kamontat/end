@@ -1,6 +1,6 @@
 import del from "del";
-import { Command } from "../models/Command";
-import { Method } from "../models/Method";
+import { Command } from "./models/Command";
+import { Method } from "./models/Method";
 
 type Option = { all: boolean };
 
