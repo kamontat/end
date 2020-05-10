@@ -8,9 +8,15 @@
     "access": "public"
   },
   "scripts": {
-    "build": "inmsys-tsc"
+    "build": "inmsys-tsc",
+    "release": "semantic-release -e semantic-release-monorepo"
   },
   "devDependencies": {
     "@nmsys/internal-compiler": "0.1.0"
+  },
+  "release": {
+    "branches": [
+      "master"
+    ]
   }
 }
