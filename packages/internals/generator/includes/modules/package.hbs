@@ -1,6 +1,6 @@
 {
   "name": "{{create_module_name category name}}",
-  "private": "{{#if (is_type category)}}true{{else}}false{{/if}}",
+  "private": {{#if (is_type category)}}true{{else}}false{{/if}},
   "version": "0.1.0",
   "description": "{{#if (is_type category)}}TypeScript definitions for {{get_normal_module_name name}}{{else}}{{description}}{{/if}}",{{#if (is_type category)}}{{else}}
   "main": "lib/index.js",{{/if}}
@@ -16,7 +16,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    {{#if (is_type category)}}
+    {{#if (is_prod category)}}
     "@nmsys/stack-commandline": "0.2.1",
     "@nmsys/stack-config-eslint": "0.2.0",
     "@nmsys/stack-config-jest": "0.2.1",

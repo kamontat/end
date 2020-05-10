@@ -30,9 +30,6 @@ export class ModulesGenerator extends Generator {
       if (category.includes("internal")) return `@nmsys/internal-${name}`;
       if (category.includes("typ")) return `@types/${name}`;
     });
-
-    // plop.addHelper("get_scripts", (category: string) => {});
-    // plop.addHelper("get_dependency_list", (category: string) => {});
   }
 
   generate(helper: Helper): GeneratorObject {
@@ -59,18 +56,60 @@ export class ModulesGenerator extends Generator {
           when: (a) => a.category !== "typing",
         },
       ],
-      actions: [
-        {
-          type: "add",
-          path: helper.module("src", "index.ts"),
-          templateFile: helper.template("index.hbs"),
-        },
-        {
-          type: "add",
-          path: helper.module("package.json"),
-          templateFile: helper.template("package.hbs"),
-        },
-      ],
+      actions: (data: Record<string, string>) => {
+        const actions = [
+          {
+            type: "add",
+            path: helper.module("package.json"),
+            templateFile: helper.template("package.hbs"),
+          },
+        ];
+
+        if (data.category.includes("typ"))
+          actions.push({
+            type: "add",
+            path: helper.module("index.d.ts"),
+            templateFile: helper.template("indexd.hbs"),
+          });
+        else
+          actions.push({
+            type: "add",
+            path: helper.module("src", "index.ts"),
+            templateFile: helper.template("index.hbs"),
+          });
+
+        if (data.category.includes("app") || data.category.includes("core") || data.category.includes("lib")) {
+          actions.push(
+            {
+              type: "add",
+              path: helper.module("tsconfig.json"),
+              templateFile: helper.template("tsconfig.hbs"),
+            },
+            {
+              type: "add",
+              path: helper.module("webpack.config.js"),
+              templateFile: helper.template("webpack.hbs"),
+            },
+            {
+              type: "add",
+              path: helper.module("jest.config.js"),
+              templateFile: helper.template("jest.hbs"),
+            },
+            {
+              type: "add",
+              path: helper.module(".eslintrc.js"),
+              templateFile: helper.template("eslintrc.hbs"),
+            },
+            {
+              type: "add",
+              path: helper.module(".prettierrc.js"),
+              templateFile: helper.template("prettierrc.hbs"),
+            },
+          );
+        }
+
+        return actions;
+      },
     };
   }
 }
