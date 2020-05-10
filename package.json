@@ -1,15 +1,21 @@
 {
   "name": "@nmsys/monorepo",
   "private": true,
+  "version": "0.0.0-development",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamontat/nmsys.git"
+  },
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "build:ci": "lerna run build --stream",
     "start:graph": "lerna run start --scope @nmsys/internal-graph",
     "test": "lerna run test",
     "test:ci": "lerna run test --stream",
     "clean": "lerna run clean",
-    "clean:info": "rm -rf ./**/*.buildinfo ./**/*.tsbuildinfo"
+    "clean:info": "rm -rf ./**/*.buildinfo ./**/*.tsbuildinfo",
+    "release": "semantic-release"
   },
   "devDependencies": {
     "@types/jest": "25.2.1",
@@ -27,6 +33,7 @@
     "ts-loader": "7.0.3",
     "typescript": "3.8.3",
     "webpack": "4.43.0",
-    "webpack-cli": "3.3.11"
+    "webpack-cli": "3.3.11",
+    "semantic-release": "17.0.7"
   }
 }
