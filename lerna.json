@@ -8,5 +8,12 @@
     },
     "bootstrap": {}
   },
-  "packages": ["packages/apps/*", "packages/cores/*", "packages/libs/*", "packages/stacks/*"]
+  "packages": [
+    "packages/typings/*",
+    "packages/internals/*",
+    "packages/stacks/*",
+    "packages/libs/*",
+    "packages/cores/*",
+    "packages/apps/*"
+  ]
 }

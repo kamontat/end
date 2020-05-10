@@ -1,0 +1,8 @@
+{
+  "name": "@types/lerna__project",
+  "version": "0.1.0",
+  "description": "TypeScript definitions for @lerna/project",
+  "license": "MIT",
+  "main": "",
+  "typings": "index.d.ts"
+}

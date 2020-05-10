@@ -4,6 +4,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
+    "start:graph": "lerna run start --scope @nmsys/internal-graph",
     "test": "lerna run test --stream",
     "test:cov": "lerna run test --stream -- --coverage true",
     "test:silent": "lerna run test",
