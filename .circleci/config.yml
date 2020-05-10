@@ -52,11 +52,12 @@ jobs:
       - image: "cimg/node:12.16"
     environment:
       ENV: "ci"
+      JEST_JUNIT_OUTPUT_DIR: ./reports/junit/
     steps:
       - add_ssh_keys:
           name: github.com
           fingerprints:
-            - '95:d8:61:2a:85:ad:42:2d:08:80:de:bb:1b:96:c9:13'
+            - "95:d8:61:2a:85:ad:42:2d:08:80:de:bb:1b:96:c9:13"
       - checkout
       - info
       - gpg-setup
@@ -82,6 +83,14 @@ jobs:
           name: Releasing...
           command: yarn release:ci || true
       - gpg-cleanup
+      - store_test_results:
+          path: ./reports/junit/
+      - store_artifacts:
+          path: ./coverage
+          destination: reports/coverage
+      - store_artifacts:
+          path: ./reports/junit/
+          destination: reports/junit
 
 workflows:
   version: 2

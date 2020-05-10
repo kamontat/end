@@ -6,15 +6,20 @@ interface JestConfig {
   testEnvironment: string;
   rootDir: string;
   collectCoverage: boolean;
+  collectCoverageFrom: string[];
+  coverageReporters: string[];
 }
 
 const jest: ConfigFunction<void, JestConfig> = (_root) => {
   return {
-    preset: "ts-jest",
-    testEnvironment: "node",
     verbose: true,
     rootDir: _root ?? process.cwd(),
+    preset: "ts-jest",
+    testEnvironment: "node",
+    reporters: ["default", "jest-junit"],
     collectCoverage: true,
+    collectCoverageFrom: ["**/*.{ts,tsx}"],
+    coverageReporters: ["json", "lcov", "text", "clover"],
   };
 };
 
