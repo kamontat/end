@@ -1,6 +1,6 @@
 {
   "name": "@nmsys/stack-commandline",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "internal compiler configuration and cli",
   "publishConfig": {
     "access": "public"
