@@ -74,9 +74,6 @@ jobs:
       - run:
           name: Test all unittest
           command: yarn test:ci
-      - run:
-          name: Build dependencies graph
-          command: yarn start:graph
       - sonarcloud/scan:
           cache_version: 1
       - store_test_results:
@@ -102,6 +99,10 @@ jobs:
       - checkout
       - gpg-setup
       - git-setup
+      - run:
+          name: Install graphviz
+          command: |
+            sudo apt-get install graphviz
       - node/install-packages:
           cache-version: "v1-lerna"
           cache-key: "yarn.lock"
@@ -110,6 +111,9 @@ jobs:
       - run:
           name: Install and links lerna project together
           command: yarn bootstrap
+      - run:
+          name: Build dependencies graph
+          command: yarn start:graph
       - run:
           name: Update version on package
           command: yarn version:ci || true
