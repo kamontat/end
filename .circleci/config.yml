@@ -53,6 +53,10 @@ jobs:
     environment:
       ENV: "ci"
     steps:
+      - add_ssh_keys:
+          name: github.com
+          fingerprints:
+            - '95:d8:61:2a:85:ad:42:2d:08:80:de:bb:1b:96:c9:13'
       - checkout
       - info
       - gpg-setup
