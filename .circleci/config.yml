@@ -16,32 +16,35 @@ commands:
     description: GPG setup
     steps:
       - run:
-          name: import private key to gpg
+          name: Import private key to gpg
           command: echo "$GPG_PRIVATE_KEY_BASE64" | base64 --decode | gpg --batch --allow-secret-key-import --import
       - run:
-          name: checking keys in gpg
+          name: Checking keys in gpg
           command: gpg --keyid-format LONG --list-secret-keys
   gpg-cleanup:
     description: GPG cleanup
     steps:
       - run:
-          name: delete gpg private key
-          command: gpg --delete-secret-key "$GPG_SIGNING_KEY"
+          name: Delete gpg private key
+          command: gpg --batch --yes --delete-secret-key "$GPG_IDENTIFY_KEY"
       - run:
-          name: checking keys in gpg
+          name: Delete gpg public key
+          command: gpg --batch --yes --delete-key "$GPG_IDENTIFY_KEY"
+      - run:
+          name: Checking keys in gpg
           command: gpg --keyid-format LONG --list-secret-key
   git-setup:
     description: Git setup
     steps:
       - run:
-          name: add git user email
+          name: Add git user email
           command: git config --global user.email "ci@kamontat.net"
       - run:
-          name: add git username
+          name: Add git username
           command: git config --global user.name "Kamontat Chantrachirathumrong [bot]"
       - run:
-          name: add git sign key
-          command: git config --global user.signingKey "GPG_SIGNING_KEY"
+          name: Add git sign key
+          command: git config --global user.signingKey "$GPG_SIGNING_KEY"
 
 jobs:
   main:
