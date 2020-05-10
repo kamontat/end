@@ -74,10 +74,16 @@ jobs:
       - run:
           name: Test all unittest
           command: yarn test:ci
+      - run:
+          name: Build dependencies graph
+          command: yarn start:graph
       - sonarcloud/scan:
           cache_version: 1
       - store_test_results:
           path: ./reports/junit/
+      - store_artifacts:
+          path: ./packages/internals/graph/graph.pdf
+          destination: result/graph.pdf
       - store_artifacts:
           path: ./coverage
           destination: reports/coverage
