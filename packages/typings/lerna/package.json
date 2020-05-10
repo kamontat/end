@@ -3,6 +3,5 @@
   "version": "0.1.1",
   "description": "TypeScript definitions for @lerna/project",
   "license": "MIT",
-  "main": "",
   "typings": "index.d.ts"
 }
