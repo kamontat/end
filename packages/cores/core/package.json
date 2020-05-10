@@ -1,6 +1,6 @@
 {
   "name": "@nmsys/core",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.0",
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -13,11 +13,11 @@
     "test": "nmsys-tester"
   },
   "devDependencies": {
-    "@nmsys/stack-config-webpack": "0.1.0",
-    "@nmsys/stack-config-eslint": "0.1.0",
-    "@nmsys/stack-config-prettier": "0.1.0",
-    "@nmsys/stack-config-jest": "0.1.0",
-    "@nmsys/stack-commandline": "0.1.0",
-    "@nmsys/stack-config-semantic-release": "0.1.0"
+    "@nmsys/stack-commandline": "0.2.0-alpha.0",
+    "@nmsys/stack-config-eslint": "0.2.0-alpha.0",
+    "@nmsys/stack-config-jest": "0.2.0-alpha.0",
+    "@nmsys/stack-config-prettier": "0.2.0-alpha.0",
+    "@nmsys/stack-config-semantic-release": "0.1.1-alpha.0",
+    "@nmsys/stack-config-webpack": "0.2.0-alpha.0"
   }
 }
