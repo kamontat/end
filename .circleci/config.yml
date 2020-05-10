@@ -15,9 +15,8 @@ orbs:
 
 jobs:
   main:
-    executor:
-      name: node/default
-      tag: "12.16"
+    docker:
+      - image: "cimg/node:12.16"
     environment:
       ENV: "ci"
     steps:
