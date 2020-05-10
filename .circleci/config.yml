@@ -118,7 +118,6 @@ workflows:
     jobs:
       - main
       - release:
-          type: approval
           filters:
             branches:
               only: master
