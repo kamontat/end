@@ -1,7 +1,7 @@
 {
-  "name": "@nmsys/stack-config-prettier",
+  "name": "@nmsys/stack-config-semantic-release",
   "version": "0.1.0",
-  "description": "configuration for prettier",
+  "description": "configuration for semantic-release",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "publishConfig": {

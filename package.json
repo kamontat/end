@@ -15,9 +15,11 @@
     "test:ci": "lerna run test --stream",
     "clean": "lerna run clean",
     "clean:info": "rm -rf ./**/*.buildinfo ./**/*.tsbuildinfo",
-    "release": "lerna run release --concurrency 1 --stream"
+    "release:ci": "lerna publish from-git"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "5.0.1",
+    "@semantic-release/git": "9.0.0",
     "@types/jest": "25.2.1",
     "@types/node": "12.12.38",
     "@typescript-eslint/eslint-plugin": "2.29.0",

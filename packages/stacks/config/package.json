@@ -1,6 +1,6 @@
 {
   "name": "@nmsys/stack-config",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "configuration interface",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -8,15 +8,10 @@
     "access": "public"
   },
   "scripts": {
-    "build": "inmsys-tsc",
-    "release": "semantic-release -e semantic-release-monorepo"
+    "build": "inmsys-tsc"
   },
   "devDependencies": {
-    "@nmsys/internal-compiler": "0.1.0"
-  },
-  "release": {
-    "branches": [
-      "master"
-    ]
+    "@nmsys/internal-compiler": "0.1.0",
+    "@nmsys/stack-config-semantic-release": "0.1.0"
   }
 }

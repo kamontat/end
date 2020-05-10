@@ -13,6 +13,6 @@
   "devDependencies": {
     "@types/eslint": "6.8.0",
     "@nmsys/internal-compiler": "0.1.0",
-    "@nmsys/stack-config": "0.1.0"
+    "@nmsys/stack-config": "1.0.0"
   }
 }

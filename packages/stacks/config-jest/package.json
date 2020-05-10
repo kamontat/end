@@ -12,6 +12,6 @@
   },
   "devDependencies": {
     "@nmsys/internal-compiler": "0.1.0",
-    "@nmsys/stack-config": "0.1.0"
+    "@nmsys/stack-config": "1.0.0"
   }
 }

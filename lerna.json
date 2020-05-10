@@ -2,8 +2,13 @@
   "version": "independent",
   "npmClient": "yarn",
   "command": {
+    "version": {
+      "allowBranch": "master",
+      "message": "chore(release): publish %s"
+    },
     "publish": {
-      "ignoreChanges": ["ignored-file", "*.md"],
+      "graphType": "all",
+      "ignoreChanges": ["*.md"],
       "message": "chore(release): publish"
     },
     "bootstrap": {}

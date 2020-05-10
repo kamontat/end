@@ -9,10 +9,12 @@
     "nmsys-compiler-tsc": "bin/nmsys-compiler-tsc.js",
     "nmsys-compiler-webpack": "bin/nmsys-compiler-webpack.js",
     "nmsys-cleaner": "bin/nmsys-cleaner.js",
-    "nmsys-tester": "bin/nmsys-tester.js"
+    "nmsys-tester": "bin/nmsys-tester.js",
+    "nmsys-release": "bin/nmsys-release.js"
   },
   "scripts": {
-    "build": "inmsys-tsc"
+    "build": "inmsys-tsc",
+    "release": "semantic-release -e semantic-release-monorepo"
   },
   "devDependencies": {
     "@nmsys/internal-compiler": "0.1.0",

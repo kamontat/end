@@ -17,6 +17,7 @@
     "@nmsys/stack-config-eslint": "0.1.0",
     "@nmsys/stack-config-prettier": "0.1.0",
     "@nmsys/stack-config-jest": "0.1.0",
-    "@nmsys/stack-commandline": "0.1.0"
+    "@nmsys/stack-commandline": "0.1.0",
+    "@nmsys/stack-config-semantic-release": "0.1.0"
   }
 }
