@@ -2,12 +2,12 @@
   "name": "@nmsys/monorepo",
   "private": true,
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap --hoist",
     "build": "lerna run build",
+    "build:ci": "lerna run build --stream",
     "start:graph": "lerna run start --scope @nmsys/internal-graph",
-    "test": "lerna run test --stream",
-    "test:cov": "lerna run test --stream -- --coverage true",
-    "test:silent": "lerna run test",
+    "test": "lerna run test",
+    "test:ci": "lerna run test --stream",
     "clean": "lerna run clean",
     "clean:info": "rm -rf ./**/*.buildinfo ./**/*.tsbuildinfo"
   },
