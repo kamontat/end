@@ -1,6 +1,6 @@
 {
   "name": "@types/lerna__project",
-  "version": "0.1.1-alpha.0",
+  "version": "0.1.1",
   "description": "TypeScript definitions for @lerna/project",
   "license": "MIT",
   "main": "",

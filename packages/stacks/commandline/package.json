@@ -1,6 +1,6 @@
 {
   "name": "@nmsys/stack-commandline",
-  "version": "0.2.0-alpha.0",
+  "version": "0.2.0",
   "description": "internal compiler configuration and cli",
   "publishConfig": {
     "access": "public"
@@ -15,7 +15,7 @@
     "build": "inmsys-tsc"
   },
   "devDependencies": {
-    "@nmsys/internal-compiler": "0.1.1-alpha.0",
+    "@nmsys/internal-compiler": "0.1.1",
     "del": "5.1.0"
   }
 }

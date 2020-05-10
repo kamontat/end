@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/kamontat/nmsys/compare/@nmsys/stack-config@1.1.0-alpha.0...@nmsys/stack-config@1.1.0) (2020-05-10)
+
+**Note:** Version bump only for package @nmsys/stack-config
+
+
+
+
+
 # 1.1.0-alpha.0 (2020-05-10)
 
 
