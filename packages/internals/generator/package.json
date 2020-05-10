@@ -8,7 +8,11 @@
     "access": "public"
   },
   "scripts": {
-    "build": "inmsys-tsc"
+    "build": "inmsys-tsc",
+    "start": "plop --plopfile lib/index.js"
+  },
+  "dependencies": {
+    "plop": "2.6.0"
   },
   "devDependencies": {
     "@nmsys/internal-compiler": "0.1.1"
