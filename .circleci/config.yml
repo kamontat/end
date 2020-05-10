@@ -1,17 +1,47 @@
 version: 2.1
 
+orbs:
+  hello: circleci/hello-build@0.0.14
+  node: circleci/node@2.1.0
+  codecov: codecov/codecov@1.0.5
+  sonarcloud: sonarsource/sonarcloud@1.0.1
+
 commands:
   info:
     description: Start workflow
     steps:
       - hello/circleci-env-highlights
       - hello/system-info
-
-orbs:
-  hello: circleci/hello-build@0.0.14
-  node: circleci/node@2.1.0
-  codecov: codecov/codecov@1.0.5
-  sonarcloud: sonarsource/sonarcloud@1.0.1
+  gpg-setup:
+    description: GPG setup
+    steps:
+      - run:
+          name: import private key to gpg
+          command: echo "$GPG_PRIVATE_KEY_BASE64" | base64 --decode | gpg --batch --allow-secret-key-import --import
+      - run:
+          name: checking keys in gpg
+          command: gpg --keyid-format LONG --list-secret-keys
+  gpg-cleanup:
+    description: GPG cleanup
+    steps:
+      - run:
+          name: delete gpg private key
+          command: gpg --delete-secret-key "$GPG_SIGNING_KEY"
+      - run:
+          name: checking keys in gpg
+          command: gpg --keyid-format LONG --list-secret-key
+  git-setup:
+    description: Git setup
+    steps:
+      - run:
+          name: add git user email
+          command: git config --global user.email "ci@kamontat.net"
+      - run:
+          name: add git username
+          command: git config --global user.name "Kamontat Chantrachirathumrong [bot]"
+      - run:
+          name: add git sign key
+          command: git config --global user.signingKey "GPG_SIGNING_KEY"
 
 jobs:
   main:
@@ -22,6 +52,8 @@ jobs:
     steps:
       - checkout
       - info
+      - gpg-setup
+      - git-setup
       - node/install-packages:
           cache-version: "v1-lerna"
           cache-key: "yarn.lock"
@@ -42,6 +74,7 @@ jobs:
       - run:
           name: Releasing...
           command: yarn release:ci || true
+      - gpg-cleanup
 
 workflows:
   version: 2
