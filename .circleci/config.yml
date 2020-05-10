@@ -37,8 +37,11 @@ jobs:
           name: Testing...
           command: yarn test:ci
       - run:
+          name: Dumping version...
+          command: yarn version:ci || true
+      - run:
           name: Releasing...
-          command: yarn release || true
+          command: yarn release:ci || true
 
 workflows:
   version: 2
