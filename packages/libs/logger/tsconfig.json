@@ -1,0 +1,3 @@
+{
+  "extends": "./node_modules/@nmsys/stack-commandline/includes/tsconfig.json"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@nmsys/lib-logger",
+  "private": false,
+  "version": "0.1.0",
+  "description": "log management by winston",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "nmsys-compiler-webpack",
+    "clean": "nmsys-cleaner",
+    "test": "nmsys-tester"
+    
+  },
+  "dependencies": {
+    "@nmsys/lib-utils": "0.1.1",
+    "winston": "3.2.1"
+  },
+  "devDependencies": {
+    "@nmsys/stack-commandline": "0.2.1",
+    "@nmsys/stack-config-eslint": "0.2.0",
+    "@nmsys/stack-config-jest": "0.2.1",
+    "@nmsys/stack-config-prettier": "0.2.0",
+    "@nmsys/stack-config-webpack": "0.2.0"
+  }
+}
