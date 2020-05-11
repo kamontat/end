@@ -1,7 +1,6 @@
 version: 2.1
 
 orbs:
-  hello: circleci/hello-build@0.0.14
   node: circleci/node@2.1.0
   sonarcloud: sonarsource/sonarcloud@1.0.1
 
@@ -11,43 +10,38 @@ parameters:
     default: "12.16"
 
 commands:
-  info:
-    description: Start workflow
-    steps:
-      - hello/circleci-env-highlights
-      - hello/system-info
   gpg-setup:
     description: GPG setup
     steps:
       - run:
-          name: "[GPG] Import private key"
+          name: "Import private key in GPG"
           command: echo "$GPG_PRIVATE_KEY_BASE64" | base64 --decode | gpg --batch --allow-secret-key-import --import
       - run:
-          name: "[GPG] Listing all secret keys"
+          name: "Listing all secret keys in GPG"
           command: gpg --keyid-format LONG --list-secret-keys
   gpg-cleanup:
     description: GPG cleanup
     steps:
       - run:
-          name: "[GPG] Deleting private key"
+          name: "Deleting private key in GPG"
           command: gpg --batch --yes --delete-secret-key "$GPG_IDENTIFY_KEY"
       - run:
-          name: "[GPG] Deleting public key"
+          name: "Deleting public key in GPG"
           command: gpg --batch --yes --delete-key "$GPG_IDENTIFY_KEY"
       - run:
-          name: "[GPG] Listing all secret keys"
+          name: "Listing all secret keys in GPG"
           command: gpg --keyid-format LONG --list-secret-key
   git-setup:
     description: Git setup
     steps:
       - run:
-          name: "[GIT] Add user email"
+          name: "Add git user email"
           command: git config --global user.email "ci@kamontat.net"
       - run:
-          name: "[GIT] Add username"
+          name: "Add git username"
           command: git config --global user.name "Kamontat Chantrachirathumrong [bot]"
       - run:
-          name: "[GIT] Add user signing key"
+          name: "Add git user signing key"
           command: git config --global user.signingKey "$GPG_SIGNING_KEY"
 
 jobs:
@@ -59,7 +53,6 @@ jobs:
       JEST_JUNIT_OUTPUT_DIR: ./reports/junit/
     steps:
       - checkout
-      - info
       - node/install-packages:
           cache-version: "v1-lerna"
           cache-key: "yarn.lock"
@@ -69,10 +62,10 @@ jobs:
           name: Install and links lerna project together
           command: yarn bootstrap
       - run:
-          name: Compile and build application
+          name: '[IMPORTANT] Compile and build application'
           command: yarn build:ci
       - run:
-          name: Test all unittest
+          name: '[IMPORTANT] Test all unittest'
           command: yarn test:ci
       - sonarcloud/scan:
           cache_version: 1
@@ -112,13 +105,13 @@ jobs:
           name: Install and links lerna project together
           command: yarn bootstrap
       - run:
-          name: Build dependencies graph
+          name: '[IMPORTANT] Build dependencies graph'
           command: yarn start:graph
       - run:
-          name: Update version on package
+          name: '[IMPORTANT] Update version on package'
           command: yarn version:ci || true
       - run:
-          name: Release new package version
+          name: '[IMPORTANT] Release new package version'
           command: yarn release:ci || true
       - gpg-cleanup
 
