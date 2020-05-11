@@ -1,6 +1,6 @@
 {
   "name": "@nmsys/internal-graph",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "configuration for webpack",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -18,6 +18,6 @@
   "devDependencies": {
     "@lerna/project": "3.18.0",
     "@nmsys/internal-compiler": "0.1.1",
-    "@types/lerna__project": "0.1.1"
+    "@types/lerna__project": "0.1.2"
   }
 }

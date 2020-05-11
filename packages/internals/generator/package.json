@@ -1,6 +1,6 @@
 {
   "name": "@nmsys/internal-generator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "bin": {
     "inmsys-generator": "bin/generator.js"
   },

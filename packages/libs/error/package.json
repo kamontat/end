@@ -1,7 +1,7 @@
 {
   "name": "@nmsys/lib-error",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "error management for nodejs",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -12,10 +12,9 @@
     "build": "nmsys-compiler-webpack",
     "clean": "nmsys-cleaner",
     "test": "nmsys-tester"
-    
   },
   "dependencies": {
-    "@nmsys/lib-utils": "0.1.0"
+    "@nmsys/lib-utils": "0.1.1"
   },
   "devDependencies": {
     "@nmsys/stack-commandline": "0.2.1",
