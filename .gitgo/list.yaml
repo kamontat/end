@@ -3,8 +3,8 @@ commit:
   keys:
     - type: feat
       value: Introducing new features.
-    - type: impr
-      value: Improving user experience / usability / reliablity.
+    - type: perf
+      value: Improving user experience / usability / reliablity / performance.
     - type: fix
       value: Fixing a bug.
     - type: refac
@@ -12,11 +12,17 @@ commit:
     - type: chore
       value: Other changes that don't modify src or test files.
   scopes:
-    - type: app
-      value: end user application
     - type: core
-      value: core application
-    - type: lib
-      value: application or core application libraries
+      value: project core
+    - type: model
+      value: project model
+    - type: config
+      value: project configuration
+    - type: util
+      value: project helper / utils
+    - type: doc
+      value: documentation
     - type: dev
-      value: development update
+      value: build system, ci or deployment cd
+    - type: release
+      value: release new package version
