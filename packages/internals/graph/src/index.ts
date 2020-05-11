@@ -16,7 +16,7 @@ getPackages(resolve(__dirname, "..", "..", "..")).then((_packages) => {
   const externalDependenciesClassify = new ExternalDependenciesClassify(classify);
 
   const internalDependencies = new Dependencies();
-  _packages.map((p) => internalDependencies.add(new InternalDependency(p)));
+  _packages.forEach((p) => internalDependencies.add(new InternalDependency(p)));
 
   _packages.forEach((p) => {
     const d = internalDependencies.get(p.name);
