@@ -25,11 +25,12 @@ export default class Manager extends AbstractManager {
     this.errors = [];
   }
 
-  run<R>(fn: RunFn<R>) {
+  run<R>(fn: RunFn<R>): R | undefined {
     try {
       return fn();
     } catch (e) {
       this.add(e);
+      return undefined;
     }
   }
 
@@ -38,6 +39,11 @@ export default class Manager extends AbstractManager {
       this.add(e);
       return undefined;
     });
+  }
+
+  reset() {
+    this.errors = [];
+    return this;
   }
 
   get hasDeadly() {

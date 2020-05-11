@@ -22,12 +22,17 @@ export default class Throwable extends Error {
     return new Throwable(-1, error.name, error.message, error.stack, deadly);
   }
 
-  private _stack: ThrowableStack[];
-  private memory: NodeJS.MemoryUsage;
+  private readonly _stack: ThrowableStack[];
+  private readonly memory: NodeJS.MemoryUsage;
 
-  constructor(private code: number, name?: string, message?: string, stack?: string, private deadly: boolean = true) {
+  constructor(
+    private readonly code: number,
+    name?: string,
+    message?: string,
+    stack?: string,
+    private readonly deadly: boolean = true,
+  ) {
     super(message ?? "something went wrong");
-
     this.memory = process.memoryUsage();
 
     const obj = { stack: [] };
@@ -40,8 +45,7 @@ export default class Throwable extends Error {
 
     // Lets make our JSON object.
     this._stack = [];
-    for (let i = 0; i < rawStack.length; i++) {
-      const frame = rawStack[i];
+    for (const frame of rawStack) {
       this._stack.push({
         path: new Paths(frame.getFileName()),
         typename: frame.getTypeName(),
@@ -92,13 +96,16 @@ export default class Throwable extends Error {
     msg += `    stacks:\n`;
     msg += `${this._stack
       .map((s) => {
-        // console.log(JSON.stringify(s));
-        const name = `${s.typename ? s.typename + "." : ""}${s.funcname ?? s.method ?? "<anonymous>"}`.padEnd(30, " ");
+        const typename = s.typename ? s.typename + "." : "";
+        const funcname = s.funcname ?? s.method ?? "<anonymous>";
+
+        const name = `${typename}${funcname}`.padEnd(30, " ");
 
         const registry = /registry\.npmjs\.org/;
-        const filename = s.path.includes(registry)
-          ? `<${s.path.after(registry, 1)}>/${s.path.filename}`
-          : `<${s.path.after(/end/, 2)}>/${s.path.after(/end/, 3)}/${s.path.filename}`;
+        const extLibName = `<${s.path.after(registry, 1)}>/${s.path.filename}`;
+        const intLibName = `<${s.path.after(/nmsys/, 2)}>/${s.path.after(/end/, 3)}/${s.path.filename}`;
+
+        const filename = s.path.includes(registry) ? extLibName : intLibName;
 
         return `      - ${name} ${filename}:${s.linenum}:${s.colmnum}`;
       })

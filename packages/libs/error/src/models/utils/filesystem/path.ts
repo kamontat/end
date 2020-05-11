@@ -16,8 +16,8 @@ export interface ParsedFile {
 }
 
 export class Paths {
-  private file: ParsedFile;
-  private dir: string[];
+  private readonly file: ParsedFile;
+  private readonly dir: string[];
 
   constructor(filepath: string | null | undefined) {
     const fileparsed = path.parse(filepath ?? "");

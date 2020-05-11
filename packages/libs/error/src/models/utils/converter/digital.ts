@@ -5,9 +5,9 @@ export enum Unit {
 }
 
 export class DigitalConverter {
-  private _bytes: number;
+  private readonly _bytes: number;
 
-  constructor(private _size: number, private _unit: Unit) {
+  constructor(private readonly _size: number, private readonly _unit: Unit) {
     this._bytes = _size * _unit;
   }
 
