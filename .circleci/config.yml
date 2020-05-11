@@ -104,6 +104,12 @@ jobs:
           name: Install and links lerna project together
           command: yarn bootstrap
       - run:
+          name: Build compiler
+          command: yarn build:init
+      - run:
+          name: Build internal graph generator
+          command: yarn build:graph
+      - run:
           name: '[IMPORTANT] Build dependencies graph'
           command: yarn start:graph
       - run:
