@@ -6,7 +6,9 @@ module.exports = {
   reporters: ["default", "jest-junit"],
   collectCoverage: true,
   collectCoverageFrom: [
-    "packages/**/*.{ts,tsx}"
+    "packages/**/*.{ts,tsx}",
+    "!packages/stacks/**/*.{ts,tsx}",
+    "!packages/internals/**/*.{ts,tsx}"
   ],
   coverageReporters: ["json", "lcov", "text", "clover"],
 };

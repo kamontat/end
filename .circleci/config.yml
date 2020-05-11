@@ -95,6 +95,8 @@ jobs:
       - run:
           name: Install graphviz
           command: |
+            sudo add-apt-repository universe
+            sudo apt-get update
             sudo apt-get install -y graphviz
       - node/install-packages:
           cache-version: "v1-lerna"
