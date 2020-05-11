@@ -66,7 +66,7 @@ export default class Throwable extends Error {
 
   get formatted() {
     if (isDevelopment()) return this.getDevelopmentFormatted;
-    else this.getProductionFormatted;
+    else return this.getProductionFormatted;
   }
 
   private conv(s: number, to: Unit) {

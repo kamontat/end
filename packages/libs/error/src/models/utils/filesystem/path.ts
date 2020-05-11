@@ -43,7 +43,7 @@ export class Paths {
    */
   first(num: number) {
     if (num === 0) return this.filename;
-    else this.dir.slice(this.dir.length - num, this.dir.length).join(path.sep);
+    else return this.dir.slice(this.dir.length - num, this.dir.length).join(path.sep);
   }
 
   /**
