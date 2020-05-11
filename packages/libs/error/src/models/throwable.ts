@@ -96,14 +96,14 @@ export default class Throwable extends Error {
     msg += `    stacks:\n`;
     msg += `${this._stack
       .map((s) => {
-        const typename = s.typename ? s.typename + "." : "";
+        const typename = s.typename ? `${s.typename}.` : "";
         const funcname = s.funcname ?? s.method ?? "<anonymous>";
 
         const name = `${typename}${funcname}`.padEnd(30, " ");
 
         const registry = /registry\.npmjs\.org/;
         const extLibName = `<${s.path.after(registry, 1)}>/${s.path.filename}`;
-        const intLibName = `<${s.path.after(/nmsys/, 2)}>/${s.path.after(/end/, 3)}/${s.path.filename}`;
+        const intLibName = `<${s.path.after(/nmsys/, 2)}>/${s.path.after(/nmsys/, 3)}/${s.path.filename}`;
 
         const filename = s.path.includes(registry) ? extLibName : intLibName;
 
