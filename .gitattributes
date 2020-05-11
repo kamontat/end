@@ -1,1 +1,9 @@
-yarn.lock                    merge=binary
+# Configs
+*.lock            text -diff
+package-lock.json text -diff
+
+# RC files (like .babelrc or .eslintrc)
+*.*rc             text
+
+# Ignore files (like .npmignore or .gitignore)
+*.*ignore         text
