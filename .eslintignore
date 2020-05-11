@@ -1,2 +1,8 @@
+# ignore compiled source code
 lib
+
+# ignore raw source code
 includes
+
+# ignore node_modules code
+node_modules
