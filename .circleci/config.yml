@@ -72,9 +72,6 @@ jobs:
       - store_test_results:
           path: ./reports/junit/
       - store_artifacts:
-          path: ./packages/internals/graph/graph.pdf
-          destination: result/graph.pdf
-      - store_artifacts:
           path: ./coverage
           destination: reports/coverage
       - store_artifacts:
@@ -116,6 +113,9 @@ jobs:
           name: '[IMPORTANT] Release new package version'
           command: yarn release:ci || true
       - gpg-cleanup
+      - store_artifacts:
+          path: ./packages/internals/graph/graph.pdf
+          destination: result/graph.pdf
 
 workflows:
   version: 2
