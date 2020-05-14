@@ -9,6 +9,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
+    "start": "lerna run start",
     "build:ci": "lerna run build --stream",
     "build:init": "lerna run build --scope '@nmsys/internal-compiler' --scope '@nmsys/stack-*'",
     "build:graph": "lerna run build --scope '@nmsys/internal-graph'",
