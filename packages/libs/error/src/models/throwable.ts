@@ -30,7 +30,7 @@ export default class Throwable extends Error {
     name?: string,
     message?: string,
     stack?: string,
-    private readonly deadly: boolean = true,
+    private readonly deadly: boolean = true
   ) {
     super(message ?? "something went wrong");
     this.memory = process.memoryUsage();
@@ -90,12 +90,12 @@ export default class Throwable extends Error {
 
     let msg = `${this.name}(${this.errcode}): ${this.message}\n`;
     msg += `    mem: ${memory.percentage.toFixed(1)}% (used=${memory.used.toFixed(2)}MB, total=${memory.total.toFixed(
-      2,
+      2
     )}MB)\n`;
 
     msg += `    stacks:\n`;
     msg += `${this._stack
-      .map((s) => {
+      .map(s => {
         const typename = s.typename ? `${s.typename}.` : "";
         const funcname = s.funcname ?? s.method ?? "<anonymous>";
 
@@ -117,7 +117,7 @@ export default class Throwable extends Error {
   private get getProductionFormatted() {
     const memory = this.getMemory(Unit.Megabyte);
     return `${this.name}(${this.errcode}): ${this.message} ${memory.percentage.toFixed(1)}% (used=${memory.used.toFixed(
-      2,
+      2
     )}MB, total=${memory.total.toFixed(2)}MB)`;
   }
 

@@ -4,7 +4,7 @@ export type ParameterObject = { id: string; value: Parameter };
 export type Parameters = Array<ParameterObject>;
 
 export class Monitor {
-  private requests: Map<string, Parameter>;
+  private readonly requests: Map<string, Parameter>;
 
   constructor() {
     this.requests = new Map();

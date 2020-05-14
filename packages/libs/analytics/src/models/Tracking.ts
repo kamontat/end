@@ -5,8 +5,8 @@ import { HitType, HitTypeMapper, getHitTypeKeyPair } from "./parameters/HitType"
 import { Parameter } from "./Parameter";
 
 export class Tracking<K extends HitType = keyof HitTypeMapper, V extends HitTypeMapper[K] = HitTypeMapper[K]> {
-  private _id: string;
-  constructor(private monitor: Monitor, type: K) {
+  private readonly _id: string;
+  constructor(private readonly monitor: Monitor, type: K) {
     this._id = v4();
     this.monitor.receiving(this.id, getHitTypeKeyPair(type));
   }

@@ -6,8 +6,11 @@ export class LoggerName {
     return new LoggerName(root, seperator);
   }
 
-  private name: string[];
-  constructor(private root: string = LoggerName.root, private seperator: string = LoggerName.separator) {
+  private readonly name: string[];
+  constructor(
+    private readonly root: string = LoggerName.root,
+    private readonly seperator: string = LoggerName.separator
+  ) {
     this.name = [this.root];
   }
 

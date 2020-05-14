@@ -11,9 +11,9 @@ import { GeneralMapper, GeneralKey } from "./parameters/General";
 import { Requests } from "./Requests";
 
 export class Universal {
-  private _options: StrictUniversalOptions;
-  private _parameters: Parameter;
-  private _monitor: Monitor;
+  private readonly _options: StrictUniversalOptions;
+  private readonly _parameters: Parameter;
+  private readonly _monitor: Monitor;
 
   constructor(tid: string, opts?: UniversalOptions) {
     this._options = {
