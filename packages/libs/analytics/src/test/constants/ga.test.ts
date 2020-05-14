@@ -1,4 +1,4 @@
-import { method, url } from "../ga";
+import { method, url } from "../../constants/ga";
 
 describe("GA Constants", () => {
   test("default method should be POST", () => expect(method).toBe("POST"));

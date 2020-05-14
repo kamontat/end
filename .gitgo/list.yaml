@@ -20,6 +20,8 @@ commit:
       value: project configuration
     - type: util
       value: project helper / utils
+    - type: test
+      value: testing
     - type: doc
       value: documentation
     - type: dev
