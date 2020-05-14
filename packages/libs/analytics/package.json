@@ -10,16 +10,19 @@
   },
   "scripts": {
     "build": "nmsys-compiler-webpack",
+    "start": "nmsys-runner",
     "clean": "nmsys-cleaner",
     "test": "nmsys-tester"
-    
   },
-  "dependencies": {},
+  "dependencies": {
+    "uuid": "8.0.0"
+  },
   "devDependencies": {
     "@nmsys/stack-commandline": "0.2.1",
     "@nmsys/stack-config-eslint": "0.2.0",
     "@nmsys/stack-config-jest": "0.2.1",
     "@nmsys/stack-config-prettier": "0.2.0",
-    "@nmsys/stack-config-webpack": "0.2.0"
+    "@nmsys/stack-config-webpack": "0.2.0",
+    "@types/uuid": "7.0.3"
   }
 }
