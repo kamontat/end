@@ -20,9 +20,9 @@ describe("Request", () => {
 
     const req = new Request(id, version, tid, "", { custom: "param" });
 
-    expect(req.body).toContainEqual(`v=${version}`);
-    expect(req.body).toContainEqual(`tid=${tid}`);
+    expect(req.body).toContain(`v=${version}`);
+    expect(req.body).toContain(`tid=${tid}`);
 
-    expect(req.body).toContainEqual(`custom=param`);
+    expect(req.body).toContain(`custom=param`);
   });
 });
