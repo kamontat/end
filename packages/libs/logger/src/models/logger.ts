@@ -14,27 +14,27 @@ export class Logger {
 
   debug(title: string, message?: string, meta: MetaData = {}) {
     this.fetchingLogger();
-    this.logger?.debug({ title, message, ...meta });
+    if (this.logger) this.logger.debug({ title, message, ...meta });
   }
 
   verbose(title: string, message?: string, meta: MetaData = {}) {
     this.fetchingLogger();
-    this.logger?.verbose({ title, message, ...meta });
+    if (this.logger) this.logger.verbose({ title, message, ...meta });
   }
 
   info(title: string, message?: string, meta: MetaData = {}) {
     this.fetchingLogger();
-    this.logger?.info({ title, message, ...meta });
+    if (this.logger) this.logger.info({ title, message, ...meta });
   }
 
   warn(title: string, message?: string, meta: MetaData = {}) {
     this.fetchingLogger();
-    this.logger?.warn({ title, message, ...meta });
+    if (this.logger) this.logger.warn({ title, message, ...meta });
   }
 
   error(title: string, message?: string, meta: MetaData = {}) {
     this.fetchingLogger();
-    this.logger?.error({ title, message, ...meta });
+    if (this.logger) this.logger.error({ title, message, ...meta });
   }
 
   setLevel(level: Level) {

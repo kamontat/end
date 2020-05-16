@@ -22,7 +22,8 @@ export class Levels {
         return Level.ERROR;
       case "silent":
         return Level.SILENT;
-      case null || undefined:
+      case null:
+      case undefined:
         return Level.ERROR;
       default:
         return Level.INFO;
