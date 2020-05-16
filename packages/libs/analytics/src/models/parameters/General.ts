@@ -1,5 +1,3 @@
-// type GeneralFunction<T> = () => T;
-
 type GeneralString = string;
 type GeneralNumber = number;
 type GeneralBoolean = boolean;

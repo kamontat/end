@@ -1,6 +1,12 @@
 import { from, ElementType } from "./ElementType";
 import { PageView } from "./PageView";
 import { ScreenView } from "./ScreenView";
+import { Event } from "./Event";
+import { Transaction } from "./Transaction";
+import { Social } from "./Social";
+import { Item } from "./Item";
+import { Exception } from "./Exception";
+import { Timing } from "./Timing";
 
 const types = from("pageview", "screenview", "event", "transaction", "item", "social", "exception", "timing");
 
@@ -26,10 +32,10 @@ export const getHitTypeKeyPair = (type: HitType) => {
 export type HitTypeMapper = {
   pageview: PageView;
   screenview: ScreenView;
-  event: string;
-  transaction: string;
-  item: string;
-  social: string;
-  exception: string;
-  timing: string;
+  event: Event;
+  transaction: Transaction;
+  item: Item;
+  social: Social;
+  exception: Exception;
+  timing: Timing;
 };

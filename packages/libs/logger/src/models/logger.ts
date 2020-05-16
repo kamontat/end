@@ -10,7 +10,7 @@ export class Logger {
   private logger?: LoggerExporter;
   private transports?: TransportExporter;
 
-  constructor(private name: LoggerName) {}
+  constructor(private readonly name: LoggerName) {}
 
   debug(title: string, message?: string, meta: MetaData = {}) {
     this.fetchingLogger();
