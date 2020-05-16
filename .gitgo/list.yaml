@@ -7,6 +7,8 @@ commit:
       value: Improving user experience / usability / reliablity / performance.
     - type: fix
       value: Fixing a bug.
+    - type: test
+      value: Add, Changes, or Remove testcase
     - type: refac
       value: A code change that neither fixes a bug nor adds a feature.
     - type: chore
