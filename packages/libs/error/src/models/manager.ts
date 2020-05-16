@@ -9,7 +9,6 @@ export enum EventType {
 
 export abstract class AbstractManager extends EventEmitter {
   emit(event: EventType, ...args: [Throwable]): boolean {
-    console.log(`trigger new event: ${event}`);
     return super.emit(event, ...args);
   }
   on(event: EventType.NEW_ERROR, listener: (...args: [Throwable]) => void): this {
@@ -35,7 +34,7 @@ export default class Manager extends AbstractManager {
   }
 
   runFuture<R>(fn: RunFn<Promise<R>>): Promise<R | undefined> {
-    return fn().catch((e) => {
+    return fn().catch(e => {
       this.add(e);
       return undefined;
     });
@@ -46,13 +45,15 @@ export default class Manager extends AbstractManager {
     return this;
   }
 
-  get hasDeadly() {
-    return this.errors.some((v) => v.needsExit);
+  hasDeadly() {
+    return this.errors.some(v => {
+      return v.deadly;
+    });
   }
 
-  get formatted() {
+  formatted() {
     let msg = "Errors: \n";
-    msg += this.errors.map((e) => `  - ${e.toString()}`);
+    msg += this.errors.map(e => `  - ${e.toString()}`);
     return msg;
   }
 

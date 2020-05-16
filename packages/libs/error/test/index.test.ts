@@ -1,4 +1,4 @@
-import { ThrowState, Throwable, ThrowStateType, ErrorManager, EventType } from "../index";
+import { ThrowState, Throwable, ThrowStateType, ErrorManager, EventType } from "../src";
 
 describe("Error manager", () => {
   it("run normal result manager", () => {
@@ -26,23 +26,23 @@ describe("Error manager", () => {
     });
 
     expect(manager.size).toBe(1);
-    manager.on(EventType.NEW_ERROR, (t) => {
+    manager.on(EventType.NEW_ERROR, t => {
       expect(t).toBeDefined();
     });
   });
 
-  it("get result from future", (done) => {
+  it("get result from future", done => {
     const manager = new ErrorManager();
     manager
       .runFuture(() => {
-        return new Promise((res) => {
+        return new Promise(res => {
           setTimeout(res, 100);
         });
       })
       .then(done);
   });
 
-  it("get exception from future", (done) => {
+  it("get exception from future", done => {
     const manager = new ErrorManager();
     manager.runFuture(() => {
       return new Promise((_, rej) => {
@@ -50,9 +50,49 @@ describe("Error manager", () => {
       });
     });
 
-    manager.on(EventType.NEW_ERROR, (t) => {
+    manager.on(EventType.NEW_ERROR, t => {
       expect(t).toBeDefined();
       done();
     });
+  });
+
+  it("get deadly when hase deadly exception", () => {
+    const manager = new ErrorManager();
+    manager.run(() => {
+      throw Throwable.from(new Error("error"), true);
+    });
+
+    manager.run(() => {
+      throw Throwable.from(new Error("error"), false);
+    });
+
+    expect(manager.hasDeadly()).toEqual(true);
+  });
+
+  it("get deadly when didn't have deadly exception", () => {
+    const manager = new ErrorManager();
+    manager.run(() => {
+      return "true";
+    });
+
+    manager.run(() => {
+      throw Throwable.from(new Error("error"), false);
+    });
+
+    expect(manager.hasDeadly()).toEqual(false);
+  });
+
+  it("reset manager object", () => {
+    const manager = new ErrorManager();
+    expect(manager.size).toEqual(0);
+
+    manager.run(() => {
+      throw Throwable.from(new Error("error"), false);
+    });
+
+    expect(manager.size).toEqual(1);
+
+    manager.reset();
+    expect(manager.size).toEqual(0);
   });
 });

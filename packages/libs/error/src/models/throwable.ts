@@ -17,20 +17,22 @@ export default class Throwable extends Error {
     return new Throwable(state.code, state.name, message, undefined, state.type === ThrowStateType.WARN ? false : true);
   }
 
-  static from<E extends Error>(error: E, deadly = true): Throwable {
-    if (error instanceof Throwable) return error;
-    return new Throwable(-1, error.name, error.message, error.stack, deadly);
+  static from<E extends Error>(error: E, deadly?: boolean): Throwable {
+    if (typeof error === "object" && typeof ((error as unknown) as Throwable).code === "number")
+      return (error as unknown) as Throwable;
+
+    return new Throwable(-1, error.name, error.message, error.stack, deadly ?? true);
   }
 
   private readonly _stack: ThrowableStack[];
   private readonly memory: NodeJS.MemoryUsage;
 
   constructor(
-    private readonly code: number,
+    public readonly code: number,
     name?: string,
     message?: string,
     stack?: string,
-    private readonly deadly: boolean = true
+    public readonly deadly: boolean = true
   ) {
     super(message ?? "something went wrong");
     this.memory = process.memoryUsage();
@@ -60,14 +62,6 @@ export default class Throwable extends Error {
     if (stack) this.stack = stack;
   }
 
-  get needsExit() {
-    return this.deadly;
-  }
-
-  get errcode() {
-    return this.code;
-  }
-
   get formatted() {
     if (isDevelopment()) return this.getDevelopmentFormatted;
     else return this.getProductionFormatted;
@@ -88,7 +82,7 @@ export default class Throwable extends Error {
   private get getDevelopmentFormatted() {
     const memory = this.getMemory(Unit.Megabyte);
 
-    let msg = `${this.name}(${this.errcode}): ${this.message}\n`;
+    let msg = `${this.name}(${this.code}): ${this.message}\n`;
     msg += `    mem: ${memory.percentage.toFixed(1)}% (used=${memory.used.toFixed(2)}MB, total=${memory.total.toFixed(
       2
     )}MB)\n`;
@@ -116,7 +110,7 @@ export default class Throwable extends Error {
 
   private get getProductionFormatted() {
     const memory = this.getMemory(Unit.Megabyte);
-    return `${this.name}(${this.errcode}): ${this.message} ${memory.percentage.toFixed(1)}% (used=${memory.used.toFixed(
+    return `${this.name}(${this.code}): ${this.message} ${memory.percentage.toFixed(1)}% (used=${memory.used.toFixed(
       2
     )}MB, total=${memory.total.toFixed(2)}MB)`;
   }
