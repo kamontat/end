@@ -6,3 +6,5 @@ export const batchPath = "/batch";
 export const batchLimit = 20;
 
 export const method = "POST";
+
+export const userAgent = "nmsys";

@@ -17,7 +17,7 @@ describe("Monitor", () => {
     const params = monitor.parameters();
 
     expect(monitor.size).toEqual(1);
-    expect(params).toContain({ id, value: param });
+    expect(params).toContainEqual({ id, value: param });
   });
 
   test("data will merge by id", () => {

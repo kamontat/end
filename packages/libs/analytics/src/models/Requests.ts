@@ -3,15 +3,12 @@ export class Requests {
     public readonly link: string,
     public readonly path: string,
     public readonly method: string,
+    public readonly agent: string,
     public readonly body: string
   ) {}
 
   get contentType() {
     return `text/plain; charset=utf-8`;
-  }
-
-  get agent() {
-    return `nmsys`;
   }
 
   getHttpRequestAsString() {

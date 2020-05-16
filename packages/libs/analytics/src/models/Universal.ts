@@ -1,7 +1,7 @@
 import { v4 } from "uuid";
 
 import { StrictUniversalOptions, UniversalOptions } from "./interfaces/UniversalOptions";
-import { url, method, batchPath, collectPath, batchLimit } from "./../constants/ga";
+import { url, method, batchPath, collectPath, batchLimit, userAgent } from "./../constants/ga";
 import { Parameter } from "./Parameter";
 import { Tracking } from "./Tracking";
 import { Monitor } from "./Monitor";
@@ -23,6 +23,8 @@ export class Universal {
       custom: {},
     };
 
+    if (opts?.option?.caches !== true) this._options.custom.z = (Math.random() * 100).toFixed(0);
+
     this._monitor = new Monitor();
     this._parameters = {};
   }
@@ -32,7 +34,7 @@ export class Universal {
     if (typeof value === "number") return this.cus(key, value.toString());
     if (typeof value === "string") return this.cus(key, value);
 
-    return this.cus(key, value.toString());
+    return this.cus(key, "");
   }
 
   cus(key: string, value: string) {
@@ -57,6 +59,7 @@ export class Universal {
       this.iGetLink(),
       this.iGetPath(),
       this.iGetMethod(),
+      this._options.protocal.userAgent ?? userAgent,
       this.iGetRequests()
         .map(v => v.body)
         .join("\n")
