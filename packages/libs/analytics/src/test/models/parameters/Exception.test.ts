@@ -7,7 +7,7 @@ describe("Exception", () => {
     ${"cd"} | ${false}
     ${"wd"} | ${false}
     ${"wa"} | ${false}
-  `("checking invalid $data", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingException(data);
     expect(res).toEqual(result);
   });
@@ -16,7 +16,7 @@ describe("Exception", () => {
     data     | result
     ${"exd"} | ${true}
     ${"exf"} | ${true}
-  `("checking valid $result", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingException(data);
     expect(res).toEqual(result);
   });

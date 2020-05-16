@@ -10,7 +10,7 @@ describe("Timing", () => {
     ${"u tc"}  | ${false}
     ${"de"}    | ${false}
     ${"aa"}    | ${false}
-  `("checking invalid $data", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingTiming(data);
     expect(res).toEqual(result);
   });
@@ -29,7 +29,7 @@ describe("Timing", () => {
     ${"srt"} | ${true}
     ${"dit"} | ${true}
     ${"clt"} | ${true}
-  `("checking valid $result", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingTiming(data);
     expect(res).toEqual(result);
   });

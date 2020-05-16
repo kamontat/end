@@ -8,7 +8,7 @@ describe("PageView", () => {
     ${"dw"} | ${false}
     ${"we"} | ${false}
     ${"cd"} | ${false}
-  `("checking invalid $data", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingPageView(data);
     expect(res).toEqual(result);
   });
@@ -18,7 +18,7 @@ describe("PageView", () => {
     ${"dh"} | ${true}
     ${"dt"} | ${true}
     ${"dp"} | ${true}
-  `("checking valid $result", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingPageView(data);
     expect(res).toEqual(result);
   });

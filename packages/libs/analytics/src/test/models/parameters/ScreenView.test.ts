@@ -7,7 +7,7 @@ describe("ScreenView", () => {
     ${"ba"} | ${false}
     ${"dw"} | ${false}
     ${"we"} | ${false}
-  `("checking invalid $data", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingScreenView(data);
     expect(res).toEqual(result);
   });
@@ -19,7 +19,7 @@ describe("ScreenView", () => {
     ${"aid"}  | ${true}
     ${"aiid"} | ${true}
     ${"cd"}   | ${true}
-  `("checking valid $result", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingScreenView(data);
     expect(res).toEqual(result);
   });

@@ -232,7 +232,7 @@ describe("Univeral", () => {
       const uni = new Universal("CIS-1200");
 
       uni.track("pageview").par("dh", "string");
-      uni.track("social").par("adsf", "hello");
+      uni.track("social").par("sn", "hello");
 
       expect(uni.requests().path).toContain(`batch`);
     });

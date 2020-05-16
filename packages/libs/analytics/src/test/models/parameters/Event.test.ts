@@ -7,7 +7,7 @@ describe("Event", () => {
     ${"ab"} | ${false}
     ${"pq"} | ${false}
     ${"ql"} | ${false}
-  `("checking invalid $data", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingEvent(data);
     expect(res).toEqual(result);
   });
@@ -18,7 +18,7 @@ describe("Event", () => {
     ${"ea"} | ${true}
     ${"el"} | ${true}
     ${"ev"} | ${true}
-  `("checking valid $result", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingEvent(data);
     expect(res).toEqual(result);
   });

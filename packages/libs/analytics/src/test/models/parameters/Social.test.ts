@@ -10,7 +10,7 @@ describe("Social", () => {
     ${"s t a"}  | ${false}
     ${"sna"}    | ${false}
     ${"asdfst"} | ${false}
-  `("checking invalid $data", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingSocial(data);
     expect(res).toEqual(result);
   });
@@ -20,7 +20,7 @@ describe("Social", () => {
     ${"sn"} | ${true}
     ${"sa"} | ${true}
     ${"st"} | ${true}
-  `("checking valid $result", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingSocial(data);
     expect(res).toEqual(result);
   });

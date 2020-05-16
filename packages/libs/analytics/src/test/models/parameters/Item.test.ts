@@ -7,20 +7,20 @@ describe("Item", () => {
     ${"ta"} | ${false}
     ${"td"} | ${false}
     ${"iw"} | ${false}
-  `("checking invalid $data", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingItem(data);
     expect(res).toEqual(result);
   });
 
   test.each`
     data    | result
-    ${"sn"} | ${true}
+    ${"ti"} | ${true}
     ${"in"} | ${true}
     ${"ip"} | ${true}
     ${"iq"} | ${true}
     ${"ic"} | ${true}
     ${"iv"} | ${true}
-  `("checking valid $result", ({ data, result }) => {
+  `("checking $data should be $result", ({ data, result }) => {
     const res = checkingItem(data);
     expect(res).toEqual(result);
   });
