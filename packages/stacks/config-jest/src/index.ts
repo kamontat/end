@@ -10,7 +10,7 @@ interface JestConfig {
   coverageReporters: string[];
 }
 
-const jest: ConfigFunction<void, JestConfig> = (_root) => {
+const jest: ConfigFunction<void, JestConfig> = _root => {
   return {
     verbose: true,
     rootDir: _root ?? process.cwd(),
@@ -19,6 +19,7 @@ const jest: ConfigFunction<void, JestConfig> = (_root) => {
     reporters: ["default", "jest-junit"],
     collectCoverage: true,
     collectCoverageFrom: ["**/*.{ts,tsx}"],
+    coveragePathIgnorePatterns: ["<rootDir>/lib/", "<rootDir>/node_modules/"],
     coverageReporters: ["json", "lcov", "text", "clover"],
   };
 };
