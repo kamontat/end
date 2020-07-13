@@ -3,6 +3,7 @@
   "private": false,
   "version": "0.1.1",
   "description": "error management for nodejs",
+  "license": "SEE LICENSE IN LICENSE",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "publishConfig": {

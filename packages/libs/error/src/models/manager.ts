@@ -52,9 +52,11 @@ export default class Manager extends AbstractManager {
   }
 
   formatted() {
-    let msg = "Errors: \n";
-    msg += this.errors.map(e => `  - ${e.toString()}`);
-    return msg;
+    if (this.size > 0) {
+      let msg = "Errors: \n";
+      msg += this.errors.map(e => `  - ${e.toString()}`);
+      return msg;
+    } else return "";
   }
 
   get size() {

@@ -1,2 +1,6 @@
-const config = require("@nmsys/stack-config-webpack").default;
-module.exports = config(__dirname);
+const fn = require("@nmsys/stack-config-webpack").default;
+const config = fn(__dirname);
+
+// config.mode = "development"
+
+module.exports = config

@@ -95,4 +95,18 @@ describe("Error manager", () => {
     manager.reset();
     expect(manager.size).toEqual(0);
   });
+
+  it("formatting string when error exist", () => {
+    const manager = new ErrorManager();
+    manager.run(() => {
+      throw Throwable.from(new Error("error"), false);
+    });
+
+    expect(manager.formatted()).not.toEqual("");
+  });
+
+  it("empty string when error is empty", () => {
+    const manager = new ErrorManager();
+    expect(manager.formatted()).toEqual("");
+  });
 });

@@ -1,5 +1,5 @@
 import { ThrowState, ThrowStateType } from "./state";
-import { isDevelopment } from "@nmsys/lib-utils";
+import { isProduction } from "@nmsys/lib-utils";
 import DigitialConverter, { Unit } from "./utils/converter/digital";
 import { Paths } from "./utils/filesystem/path";
 
@@ -58,13 +58,10 @@ export default class Throwable extends Error {
       });
     }
 
-    if (name) this.name = name;
-    if (stack) this.stack = stack;
-  }
+    if (name !== undefined) this.name = name;
+    if (stack !== undefined) this.stack = stack;
 
-  get formatted() {
-    if (isDevelopment()) return this.getDevelopmentFormatted;
-    else return this.getProductionFormatted;
+    Object.setPrototypeOf(this, Throwable.prototype);
   }
 
   private conv(s: number, to: Unit) {
@@ -79,7 +76,7 @@ export default class Throwable extends Error {
     };
   }
 
-  private get getDevelopmentFormatted() {
+  private getDevelopmentFormatted() {
     const memory = this.getMemory(Unit.Megabyte);
 
     let msg = `${this.name}(${this.code}): ${this.message}\n`;
@@ -104,11 +101,10 @@ export default class Throwable extends Error {
         return `      - ${name} ${filename}:${s.linenum}:${s.colmnum}`;
       })
       .join("\n")}`;
-
     return msg;
   }
 
-  private get getProductionFormatted() {
+  private getProductionFormatted() {
     const memory = this.getMemory(Unit.Megabyte);
     return `${this.name}(${this.code}): ${this.message} ${memory.percentage.toFixed(1)}% (used=${memory.used.toFixed(
       2
@@ -116,10 +112,11 @@ export default class Throwable extends Error {
   }
 
   equals(e: Throwable) {
-    return e.code === this.code && e.message === this.message;
+    return e.code === this.code && e.name === this.name;
   }
 
   toString() {
-    return this.formatted;
+    if (isProduction()) return this.getProductionFormatted();
+    else return this.getDevelopmentFormatted();
   }
 }
